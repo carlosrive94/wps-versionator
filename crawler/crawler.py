@@ -10,7 +10,8 @@ from urllib.parse import urlparse
 class WPSpider(Spider):
     name = 'wpspider'
     allowed_domains = ['www.google.com']
-    start_urls = ['https://www.google.es/search?q=%E2%80%9Cindex+of%E2%80%9D+inurl:wp-content']
+    start_urls = ['https://www.google.es/search?q=%E2%80%9Cindex+of%E2%80%9D+inurl:wp-content&start=' + str(i * 10) for
+                  i in range(20)]
 
     def parse(self, response):
         sel = Selector(response)
@@ -22,9 +23,10 @@ class WPSpider(Spider):
             parsed_uri = urlparse(url)
             domain = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
             version = get_version(domain)
+            print('****Domain:' + domain)
             data.append({'url': domain, 'version': version})
 
-        with open("data.json", "w") as outfile:
+        with open("..\data\data.json", "w") as outfile:
             json.dump({'urls': data}, outfile, indent=4)
 
 
