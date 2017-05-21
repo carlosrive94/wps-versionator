@@ -1,6 +1,286 @@
 {
     "urls": [
         {
+            "url": "willits.org",
+            "version": "-1"
+        },
+        {
+            "url": "www.jacksonsmusic.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.holmeshomes.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.jacksonsmusic.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.thelife.cc",
+            "version": "4.6.6"
+        },
+        {
+            "url": "henrymollicone.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.hyperpay.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.biofiredx.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.train-museum.org",
+            "version": "4.7"
+        },
+        {
+            "url": "www.beronet.com",
+            "version": "4.7"
+        },
+        {
+            "url": "smilecaredallas.com",
+            "version": "-1"
+        },
+        {
+            "url": "momentfeed.com",
+            "version": "4.7"
+        },
+        {
+            "url": "rebeccanelson.co.nz",
+            "version": "-1"
+        },
+        {
+            "url": "momentfeed.com",
+            "version": "4.7"
+        },
+        {
+            "url": "eathawkers.com",
+            "version": "-1"
+        },
+        {
+            "url": "vistavinomoderngrill.com",
+            "version": "4.7"
+        },
+        {
+            "url": "cressey.com",
+            "version": "4.7"
+        },
+        {
+            "url": "safetyandquality.gov.au",
+            "version": "4.6.1"
+        },
+        {
+            "url": "www.casinopop.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.mudlet.org",
+            "version": "4.7"
+        },
+        {
+            "url": "baxterstorey.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.kearch.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.hostels-israel.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.pearson-eng.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.curacaopartyguide.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.rcdsonline.ca",
+            "version": "4.7"
+        },
+        {
+            "url": "bedbunkers.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.rcdsonline.ca",
+            "version": "4.7"
+        },
+        {
+            "url": "www.helptobuyshow.co.uk",
+            "version": "4.7"
+        },
+        {
+            "url": "www.tyonhakuopas.com",
+            "version": "-1"
+        },
+        {
+            "url": "buildingarts.ca",
+            "version": "4.4.4"
+        },
+        {
+            "url": "www.thegoodspace.com",
+            "version": "4.2.15"
+        },
+        {
+            "url": "www.imbodenlive.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.thurgoodmarshallbarassociation.org",
+            "version": "4.7"
+        },
+        {
+            "url": "pac.org.za",
+            "version": "4.7"
+        },
+        {
+            "url": "kitesurfinguk.org.uk",
+            "version": "4.7"
+        },
+        {
+            "url": "horseranchbonaire.com",
+            "version": "4.7"
+        },
+        {
+            "url": "joincbr.com",
+            "version": "4.7"
+        },
+        {
+            "url": "anacortes.org",
+            "version": "4.7"
+        },
+        {
+            "url": "producerschoicehonors.com",
+            "version": "4.7"
+        },
+        {
+            "url": "producerschoicehonors.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.lorizanini.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.bmbinvestment.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.ag-it.com",
+            "version": "4.6.3"
+        },
+        {
+            "url": "www.lifecoachspotter.com",
+            "version": "-1"
+        },
+        {
+            "url": "southtahoeairporter.com",
+            "version": "4.5.9"
+        },
+        {
+            "url": "friendsoflbl.org",
+            "version": "4.3.1"
+        },
+        {
+            "url": "2smsupernetwork.com",
+            "version": "-1"
+        },
+        {
+            "url": "seawaymall.com",
+            "version": "-1"
+        },
+        {
+            "url": "playersring.org",
+            "version": "-1"
+        },
+        {
+            "url": "danielmate.com",
+            "version": "4.4.10"
+        },
+        {
+            "url": "www.masterpoolcare.com.au",
+            "version": "-1"
+        },
+        {
+            "url": "teskje.no",
+            "version": "3.9.18"
+        },
+        {
+            "url": "trion.com",
+            "version": "4.7"
+        },
+        {
+            "url": "revivifyyourbody.com",
+            "version": "4.7"
+        },
+        {
+            "url": "leuca.com",
+            "version": "4.6.6"
+        },
+        {
+            "url": "www.mykonosrestaurantbellingham.com",
+            "version": "3.3.1"
+        },
+        {
+            "url": "www.publicitarioscriativos.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.gael-taca.com",
+            "version": "4.7"
+        },
+        {
+            "url": "wildwestcountryfestival.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.mykonosrestaurantbellingham.com",
+            "version": "3.3.1"
+        },
+        {
+            "url": "www.publicitarioscriativos.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.gael-taca.com",
+            "version": "4.7"
+        },
+        {
+            "url": "wildwestcountryfestival.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.immo2-0.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.jocc.org",
+            "version": "4.4.8"
+        },
+        {
+            "url": "www.jazzandbluesweb.com",
+            "version": "-1"
+        },
+        {
+            "url": "applecanyonlake.org",
+            "version": "4.7"
+        },
+        {
+            "url": "teenempower.org",
+            "version": "4.7"
+        },
+        {
+            "url": "palandsmith.com",
+            "version": "4.3"
+        },
+        {
             "url": "www.carolines.com",
             "version": "3.8.21"
         },
