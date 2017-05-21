@@ -1,43 +1,323 @@
 {
     "urls": [
         {
-            "url": "http://www.carolines.com/",
+            "url": "www.carolines.com",
             "version": "3.8.21"
         },
         {
-            "url": "http://www.planificacion.gob.ec/",
-            "version": "4.3.11"
-        },
-        {
-            "url": "http://savetheelephants.org/",
+            "url": "savetheelephants.org",
             "version": "4.7"
         },
         {
-            "url": "http://www.aiesec.org.es/",
-            "version": "4.5.9"
+            "url": "sector.ca",
+            "version": "4.7"
         },
         {
-            "url": "http://www.registrocivil.gob.ec/",
-            "version": "3.5"
+            "url": "coxlesscrew.com",
+            "version": "4.1.18"
         },
         {
-            "url": "http://resol.es/",
-            "version": "4.3"
+            "url": "caporegon.org",
+            "version": "4.7"
         },
         {
-            "url": "http://resol.es/",
-            "version": "4.3"
+            "url": "www.moncoursierdequartier.com",
+            "version": "4.7"
         },
         {
-            "url": "http://www.laurelhighlands.com/",
+            "url": "moabfreehealthclinic.org",
             "version": "-1"
         },
         {
-            "url": "http://www.cinemaaylmer.com/",
+            "url": "www.octagoncommunityacupuncture.com",
+            "version": "3.4.2"
+        },
+        {
+            "url": "www.extralife-cafe.com",
+            "version": "4.7"
+        },
+        {
+            "url": "lesnapoleons.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.jacksonsmusic.com",
+            "version": "4.7"
+        },
+        {
+            "url": "willits.org",
+            "version": "-1"
+        },
+        {
+            "url": "www.jacksonsmusic.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.awesomewalks.nz",
+            "version": "-1"
+        },
+        {
+            "url": "www.jacksonsmusic.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.holmeshomes.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.thelife.cc",
+            "version": "4.6.6"
+        },
+        {
+            "url": "henrymollicone.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.hyperpay.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.train-museum.org",
+            "version": "4.7"
+        },
+        {
+            "url": "www.beronet.com",
+            "version": "4.7"
+        },
+        {
+            "url": "smilecaredallas.com",
+            "version": "-1"
+        },
+        {
+            "url": "momentfeed.com",
+            "version": "4.7"
+        },
+        {
+            "url": "rebeccanelson.co.nz",
+            "version": "-1"
+        },
+        {
+            "url": "momentfeed.com",
+            "version": "4.7"
+        },
+        {
+            "url": "eathawkers.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.aggielandwargames.com",
+            "version": "-1"
+        },
+        {
+            "url": "vistavinomoderngrill.com",
+            "version": "4.7"
+        },
+        {
+            "url": "cressey.com",
+            "version": "4.7"
+        },
+        {
+            "url": "safetyandquality.gov.au",
+            "version": "4.6.1"
+        },
+        {
+            "url": "www.lellocondominios.com.br",
+            "version": "4.6"
+        },
+        {
+            "url": "www.casinopop.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.mudlet.org",
+            "version": "4.7"
+        },
+        {
+            "url": "baxterstorey.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.kearch.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.hostels-israel.com",
+            "version": "4.7"
+        },
+        {
+            "url": "integratedleader.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.pearson-eng.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.curacaopartyguide.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.rcdsonline.ca",
+            "version": "4.7"
+        },
+        {
+            "url": "bedbunkers.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.rcdsonline.ca",
+            "version": "4.7"
+        },
+        {
+            "url": "www.helptobuyshow.co.uk",
+            "version": "4.7"
+        },
+        {
+            "url": "www.tyonhakuopas.com",
+            "version": "-1"
+        },
+        {
+            "url": "www.crosspointhostel.com",
+            "version": "4.1.18"
+        },
+        {
+            "url": "www.joinsherpa.com",
+            "version": "4.7"
+        },
+        {
+            "url": "buildingarts.ca",
+            "version": "4.4.4"
+        },
+        {
+            "url": "www.thegoodspace.com",
+            "version": "4.2.15"
+        },
+        {
+            "url": "www.imbodenlive.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.thurgoodmarshallbarassociation.org",
+            "version": "4.7"
+        },
+        {
+            "url": "pac.org.za",
+            "version": "4.7"
+        },
+        {
+            "url": "www.monmouthcountypoliceacademy.com",
+            "version": "-1"
+        },
+        {
+            "url": "seqmayors.qld.gov.au",
+            "version": "4.6.6"
+        },
+        {
+            "url": "thebandha.com",
+            "version": "4.7"
+        },
+        {
+            "url": "kitesurfinguk.org.uk",
+            "version": "4.7"
+        },
+        {
+            "url": "horseranchbonaire.com",
+            "version": "4.7"
+        },
+        {
+            "url": "joincbr.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.ag-it.com",
+            "version": "4.6.3"
+        },
+        {
+            "url": "www.lifecoachspotter.com",
+            "version": "-1"
+        },
+        {
+            "url": "southtahoeairporter.com",
+            "version": "4.5.9"
+        },
+        {
+            "url": "friendsoflbl.org",
             "version": "4.3.1"
         },
         {
-            "url": "http://www.africome.com/",
+            "url": "playersring.org",
+            "version": "-1"
+        },
+        {
+            "url": "via-arkadia.co.il",
+            "version": "4.5.9"
+        },
+        {
+            "url": "wilsonboatyardmarina.com",
+            "version": "3.9.19"
+        },
+        {
+            "url": "www.friendsofcitypark.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.seguimientodeobras.com",
+            "version": "4.7"
+        },
+        {
+            "url": "koco-sailing.com",
+            "version": "4.7"
+        },
+        {
+            "url": "novaposhta.md",
+            "version": "-1"
+        },
+        {
+            "url": "kmrlawgroup.com",
+            "version": "4.7"
+        },
+        {
+            "url": "danielmate.com",
+            "version": "4.4.10"
+        },
+        {
+            "url": "www.masterpoolcare.com.au",
+            "version": "-1"
+        },
+        {
+            "url": "teskje.no",
+            "version": "3.9.18"
+        },
+        {
+            "url": "trion.com",
+            "version": "4.7"
+        },
+        {
+            "url": "revivifyyourbody.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.thecloudfoundation.org",
+            "version": "-1"
+        },
+        {
+            "url": "leuca.com",
+            "version": "4.6.6"
+        },
+        {
+            "url": "www.mykonosrestaurantbellingham.com",
+            "version": "3.3.1"
+        },
+        {
+            "url": "www.publicitarioscriativos.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.gael-taca.com",
+            "version": "4.7"
+        },
+        {
+            "url": "www.hotelperjanik.me",
             "version": "-1"
         }
     ]
