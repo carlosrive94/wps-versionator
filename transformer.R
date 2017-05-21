@@ -23,11 +23,25 @@ print(df_json_dd)
 
 # Cambiamos las versiones -1 por NA
 df_json_dd$version[which(df_json_dd$version==-1)]<-NA
+#df_json_dd$version[which(df_json_dd$version==-1)]<-"NSNC"
 print(df_json_dd)
 
 # Sumamos Numero de URLs de cada version
 table(df_json_dd)
-TotalVersiones <- colSums(table(df_json_dd))
+TotalVersiones <- as.data.frame(colSums(table(df_json_dd)))
+is.data.frame(TotalVersiones)
 TotalVersiones
 
 
+
+colnames(TotalVersiones) <- c("TotalURLs")
+str(TotalVersiones)
+TotalVersiones
+
+
+
+
+# GRAFICAS
+suppressPackageStartupMessages(library(googleVis))
+
+#Convertimos a dataframe
