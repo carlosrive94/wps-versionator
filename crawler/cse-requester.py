@@ -5,9 +5,8 @@ from bs4 import BeautifulSoup
 
 apikey = 'AIzaSyClCn_nNkXcxnsdpXxTCG_LwVff66W4D7g'
 cx = '016149970605689745710:lzye9oapw7y'
-query = '%E2%80%9Cindex+of%E2%80%9D+inurl%3Awp-content'
-number_of_pages = 8
-start_page = 1
+query = '%E2%80%9Cindex+of%E2%80%9D+inurl%3Awp-content+site%3A'
+sites = ['es', 'ad', 'at', 'be', 'ch', 'cy', 'cz']
 
 
 def get_version(domain):
@@ -22,29 +21,31 @@ def get_version(domain):
     return version
 
 
-data = []
+data = {'urls': {}}
 
-for i in range(number_of_pages):
-    start = ((i + start_page) * 10) + 1
-    req_url = 'https://www.googleapis.com/customsearch/v1?key=' + apikey + '&cx=' + cx + '&q=' + query + '&start=' + str(
-        start)
-    try:
+for site in sites:
+    url = 'https://www.googleapis.com/customsearch/v1?key=' + apikey + '&cx=' + cx + '&q=' + query + site
+    data['urls'][site] = []
+
+    index = 1
+    while index != -1:
+        req_url = url + '&start=' + str(index)
         print('Request to: ' + req_url)
-        resp = requests.get(req_url).json()
-        print(resp)
+        try:
+            resp = requests.get(req_url).json()
+            for item in resp['items']:
+                domain = item['displayLink']
+                version = get_version(domain)
+                print('Adding ' + domain + ' / ' + version)
+                data['urls'][site].append({'url': domain, 'version': version})
+        except:
+            pass
 
-        for item in resp['items']:
-            domain = item['displayLink']
-            version = get_version(domain)
-            print('Adding ' + domain + ' / ' + version)
-            data.append({'url': domain, 'version': version})
-
-    except Exception as e:
-        print('Error accesing page ' + str(start) + ':', e)
-
-with open("..\data\data.json") as outfile:
-    data += json.load(outfile)['urls']
+        try:
+            index = resp['queries']['nextPage'][0]['startIndex']
+        except:
+            index = -1
 
 with open("..\data\data.json", "w") as outfile:
-    json.dump({'urls': data}, outfile, indent=4)
+    json.dump(data, outfile, indent=4)
     print('Data loaded on data.json')
