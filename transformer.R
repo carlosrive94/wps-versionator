@@ -30,4 +30,15 @@ table(df_json_dd)
 TotalVersiones <- colSums(table(df_json_dd))
 TotalVersiones
 
-
+# ********************
+# * Carrega de vulnerabilitats *
+# ********************
+all <- list()
+for(i in 20:43){
+  res <- getURL(url = paste("https://wpvulndb.com/api/v2/wordpresses/", i, sep=""))
+  all <- tryCatch({
+    append(all, fromJSON(res))
+  }, error = function(err) {
+    print(paste("ERROR in version", i,":",err))
+  })
+}
