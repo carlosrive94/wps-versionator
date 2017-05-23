@@ -34,8 +34,9 @@ TotalVersiones
 # * Carrega de vulnerabilitats *
 # ********************
 all <- list()
-for(i in 20:43){
-  res <- getURL(url = paste("https://wpvulndb.com/api/v2/wordpresses/", i, sep=""))
+versions <- c('20','41','42','43')
+for(version in versions){
+  res <- getURL(url = paste("https://wpvulndb.com/api/v2/wordpresses/", version, sep=""))
   all <- tryCatch({
     append(all, fromJSON(res))
   }, error = function(err) {
