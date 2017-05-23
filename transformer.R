@@ -32,6 +32,7 @@ TotalVersiones <- as.data.frame(colSums(table(df_json_dd)))
 is.data.frame(TotalVersiones)
 TotalVersiones
 
+<<<<<<< HEAD
 
 
 colnames(TotalVersiones) <- c("TotalURLs")
@@ -45,3 +46,18 @@ TotalVersiones
 suppressPackageStartupMessages(library(googleVis))
 
 #Convertimos a dataframe
+=======
+# ********************
+# * Carrega de vulnerabilitats *
+# ********************
+all <- list()
+versions <- c('20','41','42','43')
+for(version in versions){
+  res <- getURL(url = paste("https://wpvulndb.com/api/v2/wordpresses/", version, sep=""))
+  all <- tryCatch({
+    append(all, fromJSON(res))
+  }, error = function(err) {
+    print(paste("ERROR in version", i,":",err))
+  })
+}
+>>>>>>> 44573b9e28bb2b9bc8dadc329a261df4e2cae3d3
