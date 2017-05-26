@@ -1,324 +1,2939 @@
 {
-    "urls": [
-        {
-            "url": "www.carolines.com",
-            "version": "3.8.21"
-        },
-        {
-            "url": "savetheelephants.org",
-            "version": "4.7"
-        },
-        {
-            "url": "sector.ca",
-            "version": "4.7"
-        },
-        {
-            "url": "coxlesscrew.com",
-            "version": "4.1.18"
-        },
-        {
-            "url": "caporegon.org",
-            "version": "4.7"
-        },
-        {
-            "url": "www.moncoursierdequartier.com",
-            "version": "4.7"
-        },
-        {
-            "url": "moabfreehealthclinic.org",
-            "version": "-1"
-        },
-        {
-            "url": "www.octagoncommunityacupuncture.com",
-            "version": "3.4.2"
-        },
-        {
-            "url": "www.extralife-cafe.com",
-            "version": "4.7"
-        },
-        {
-            "url": "lesnapoleons.com",
-            "version": "-1"
-        },
-        {
-            "url": "www.jacksonsmusic.com",
-            "version": "4.7"
-        },
-        {
-            "url": "willits.org",
-            "version": "-1"
-        },
-        {
-            "url": "www.jacksonsmusic.com",
-            "version": "4.7"
-        },
-        {
-            "url": "www.awesomewalks.nz",
-            "version": "-1"
-        },
-        {
-            "url": "www.jacksonsmusic.com",
-            "version": "4.7"
-        },
-        {
-            "url": "www.holmeshomes.com",
-            "version": "4.7"
-        },
-        {
-            "url": "www.thelife.cc",
-            "version": "4.6.6"
-        },
-        {
-            "url": "henrymollicone.com",
-            "version": "4.7"
-        },
-        {
-            "url": "www.hyperpay.com",
-            "version": "-1"
-        },
-        {
-            "url": "www.train-museum.org",
-            "version": "4.7"
-        },
-        {
-            "url": "www.beronet.com",
-            "version": "4.7"
-        },
-        {
-            "url": "smilecaredallas.com",
-            "version": "-1"
-        },
-        {
-            "url": "momentfeed.com",
-            "version": "4.7"
-        },
-        {
-            "url": "rebeccanelson.co.nz",
-            "version": "-1"
-        },
-        {
-            "url": "momentfeed.com",
-            "version": "4.7"
-        },
-        {
-            "url": "eathawkers.com",
-            "version": "-1"
-        },
-        {
-            "url": "www.aggielandwargames.com",
-            "version": "-1"
-        },
-        {
-            "url": "vistavinomoderngrill.com",
-            "version": "4.7"
-        },
-        {
-            "url": "cressey.com",
-            "version": "4.7"
-        },
-        {
-            "url": "safetyandquality.gov.au",
-            "version": "4.6.1"
-        },
-        {
-            "url": "www.lellocondominios.com.br",
-            "version": "4.6"
-        },
-        {
-            "url": "www.casinopop.com",
-            "version": "-1"
-        },
-        {
-            "url": "www.mudlet.org",
-            "version": "4.7"
-        },
-        {
-            "url": "baxterstorey.com",
-            "version": "-1"
-        },
-        {
-            "url": "www.kearch.com",
-            "version": "-1"
-        },
-        {
-            "url": "www.hostels-israel.com",
-            "version": "4.7"
-        },
-        {
-            "url": "integratedleader.com",
-            "version": "-1"
-        },
-        {
-            "url": "www.pearson-eng.com",
-            "version": "-1"
-        },
-        {
-            "url": "www.curacaopartyguide.com",
-            "version": "4.7"
-        },
-        {
-            "url": "www.rcdsonline.ca",
-            "version": "4.7"
-        },
-        {
-            "url": "bedbunkers.com",
-            "version": "4.7"
-        },
-        {
-            "url": "www.rcdsonline.ca",
-            "version": "4.7"
-        },
-        {
-            "url": "www.helptobuyshow.co.uk",
-            "version": "4.7"
-        },
-        {
-            "url": "www.tyonhakuopas.com",
-            "version": "-1"
-        },
-        {
-            "url": "www.crosspointhostel.com",
-            "version": "4.1.18"
-        },
-        {
-            "url": "www.joinsherpa.com",
-            "version": "4.7"
-        },
-        {
-            "url": "buildingarts.ca",
-            "version": "4.4.4"
-        },
-        {
-            "url": "www.thegoodspace.com",
-            "version": "4.2.15"
-        },
-        {
-            "url": "www.imbodenlive.com",
-            "version": "4.7"
-        },
-        {
-            "url": "www.thurgoodmarshallbarassociation.org",
-            "version": "4.7"
-        },
-        {
-            "url": "pac.org.za",
-            "version": "4.7"
-        },
-        {
-            "url": "www.monmouthcountypoliceacademy.com",
-            "version": "-1"
-        },
-        {
-            "url": "seqmayors.qld.gov.au",
-            "version": "4.6.6"
-        },
-        {
-            "url": "thebandha.com",
-            "version": "4.7"
-        },
-        {
-            "url": "kitesurfinguk.org.uk",
-            "version": "4.7"
-        },
-        {
-            "url": "horseranchbonaire.com",
-            "version": "4.7"
-        },
-        {
-            "url": "joincbr.com",
-            "version": "4.7"
-        },
-        {
-            "url": "www.ag-it.com",
-            "version": "4.6.3"
-        },
-        {
-            "url": "www.lifecoachspotter.com",
-            "version": "-1"
-        },
-        {
-            "url": "southtahoeairporter.com",
-            "version": "4.5.9"
-        },
-        {
-            "url": "friendsoflbl.org",
-            "version": "4.3.1"
-        },
-        {
-            "url": "playersring.org",
-            "version": "-1"
-        },
-        {
-            "url": "via-arkadia.co.il",
-            "version": "4.5.9"
-        },
-        {
-            "url": "wilsonboatyardmarina.com",
-            "version": "3.9.19"
-        },
-        {
-            "url": "www.friendsofcitypark.com",
-            "version": "4.7"
-        },
-        {
-            "url": "www.seguimientodeobras.com",
-            "version": "4.7"
-        },
-        {
-            "url": "koco-sailing.com",
-            "version": "4.7"
-        },
-        {
-            "url": "novaposhta.md",
-            "version": "-1"
-        },
-        {
-            "url": "kmrlawgroup.com",
-            "version": "4.7"
-        },
-        {
-            "url": "danielmate.com",
-            "version": "4.4.10"
-        },
-        {
-            "url": "www.masterpoolcare.com.au",
-            "version": "-1"
-        },
-        {
-            "url": "teskje.no",
-            "version": "3.9.18"
-        },
-        {
-            "url": "trion.com",
-            "version": "4.7"
-        },
-        {
-            "url": "revivifyyourbody.com",
-            "version": "4.7"
-        },
-        {
-            "url": "www.thecloudfoundation.org",
-            "version": "-1"
-        },
-        {
-            "url": "leuca.com",
-            "version": "4.6.6"
-        },
-        {
-            "url": "www.mykonosrestaurantbellingham.com",
-            "version": "3.3.1"
-        },
-        {
-            "url": "www.publicitarioscriativos.com",
-            "version": "4.7"
-        },
-        {
-            "url": "www.gael-taca.com",
-            "version": "4.7"
-        },
-        {
-            "url": "www.hotelperjanik.me",
-            "version": "-1"
-        }
-    ]
+    "urls": {
+        "es": [
+            {
+                "url": "www.um.es",
+                "version": "-1"
+            },
+            {
+                "url": "fuckingyoung.es",
+                "version": "-1"
+            },
+            {
+                "url": "www.ser.es",
+                "version": "-1"
+            },
+            {
+                "url": "www.colegiozaragozasur.es",
+                "version": "4.7"
+            },
+            {
+                "url": "tehno.esy.es",
+                "version": "-1"
+            }
+        ],
+        "ad": [
+            {
+                "url": "cea.ad",
+                "version": "-1"
+            },
+            {
+                "url": "www.uda.ad",
+                "version": "4.6"
+            }
+        ],
+        "at": [
+            {
+                "url": "www.bisnode.at",
+                "version": "4.7"
+            },
+            {
+                "url": "www.biomet.co.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.aau.at",
+                "version": "4.7"
+            },
+            {
+                "url": "ib-humer.at",
+                "version": "4.7"
+            },
+            {
+                "url": "homepage.univie.ac.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.iwm.at",
+                "version": "-1"
+            },
+            {
+                "url": "fuchs.uti.at",
+                "version": "3.1"
+            },
+            {
+                "url": "www.scannwork.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.sns3.uti.at",
+                "version": "3.0.1"
+            },
+            {
+                "url": "ccbsr.fh-vie.ac.at",
+                "version": "4.7"
+            },
+            {
+                "url": "ccbsr.fh-vie.ac.at",
+                "version": "4.7"
+            },
+            {
+                "url": "www.beigewum.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.zara.or.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.erbium.at",
+                "version": "-1"
+            },
+            {
+                "url": "wachstumimwandel.at",
+                "version": "-1"
+            },
+            {
+                "url": "iam.tugraz.at",
+                "version": "4.6.1"
+            },
+            {
+                "url": "www.ippm.at",
+                "version": "4.7"
+            },
+            {
+                "url": "www.oegp.at",
+                "version": "4.7"
+            },
+            {
+                "url": "dr.aspalter.at",
+                "version": "4.7"
+            },
+            {
+                "url": "www.oefg.at",
+                "version": "-1"
+            },
+            {
+                "url": "bildunggrenzenlos.at",
+                "version": "4.7"
+            },
+            {
+                "url": "www.univie.ac.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.energieinstitut.at",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.univie.ac.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.kreativwirtschaft.at",
+                "version": "-1"
+            },
+            {
+                "url": "blog.wu.ac.at",
+                "version": "4.7"
+            },
+            {
+                "url": "www.aks.or.at",
+                "version": "3.8.21"
+            },
+            {
+                "url": "www.blueboxx.at",
+                "version": "4.7"
+            },
+            {
+                "url": "pflege-professionell.at",
+                "version": "4.7"
+            },
+            {
+                "url": "www.oegpmr.at",
+                "version": "4.4.1"
+            },
+            {
+                "url": "lampy.tugraz.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.salzburgresearch.at",
+                "version": "-1"
+            },
+            {
+                "url": "cdecon.jku.at",
+                "version": "4.7"
+            },
+            {
+                "url": "cg.tuwien.ac.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.isols.at",
+                "version": "4.7"
+            },
+            {
+                "url": "vidwirel.oeaw.ac.at",
+                "version": "3.9.19"
+            },
+            {
+                "url": "www.wachstumimwandel.at",
+                "version": "-1"
+            },
+            {
+                "url": "abtreibung.at",
+                "version": "4.7"
+            },
+            {
+                "url": "www.ivva.at",
+                "version": "-1"
+            },
+            {
+                "url": "kritische-eb.at",
+                "version": "-1"
+            },
+            {
+                "url": "responsible-management.at",
+                "version": "4.7"
+            },
+            {
+                "url": "mevss.jku.at",
+                "version": "4.7"
+            },
+            {
+                "url": "www.barbara-strasser.at",
+                "version": "3.5.2"
+            },
+            {
+                "url": "carma.fhstp.ac.at",
+                "version": "4.7"
+            },
+            {
+                "url": "projects.icts.sbg.ac.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.bartelt.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.abcsg.at",
+                "version": "-1"
+            },
+            {
+                "url": "ius.aau.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.junk-jantsch.at",
+                "version": "4.4.10"
+            },
+            {
+                "url": "www.unfallchirurgen.at",
+                "version": "4.7"
+            },
+            {
+                "url": "recap.wu.ac.at",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.esf.at",
+                "version": "-1"
+            },
+            {
+                "url": "ahi-carrier.at",
+                "version": "3.4.1"
+            },
+            {
+                "url": "mario.ruthmair.at",
+                "version": "4.7"
+            },
+            {
+                "url": "www.nt.tuwien.ac.at",
+                "version": "4.7"
+            },
+            {
+                "url": "sfu.cw-software.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.caa.tuwien.ac.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.wohnen-fuer-alle.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.caa.tuwien.ac.at",
+                "version": "-1"
+            },
+            {
+                "url": "ccns.sbg.ac.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.verpflegungsautomaten.at",
+                "version": "4.0.18"
+            },
+            {
+                "url": "maennerundvereinbarkeit.at",
+                "version": "4.7"
+            },
+            {
+                "url": "rim.feldundhof.at",
+                "version": "4.7"
+            },
+            {
+                "url": "www.dv-jugend.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.evazangerle.at",
+                "version": "4.7"
+            },
+            {
+                "url": "www.bura.at",
+                "version": "-1"
+            },
+            {
+                "url": "lexon.at",
+                "version": "4.7"
+            },
+            {
+                "url": "www.pumberger.co.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.mobilitaetsagentur.at",
+                "version": "-1"
+            },
+            {
+                "url": "oegn.at",
+                "version": "4.6.4"
+            },
+            {
+                "url": "kutzendoerfer.at",
+                "version": "4.1"
+            },
+            {
+                "url": "sap.or.at",
+                "version": "4.7"
+            },
+            {
+                "url": "amalthea.at",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.letztehilfe.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.goed-ahs.at",
+                "version": "-1"
+            },
+            {
+                "url": "www.thomas-stephenson.at",
+                "version": "2.7"
+            }
+        ],
+        "be": [
+            {
+                "url": "www.loligrub.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.bisnode.be",
+                "version": "-1"
+            },
+            {
+                "url": "stib-mivb.tesial-tech.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.vub.ac.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.sefi.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.steunpuntmedia.be",
+                "version": "3.3.2"
+            },
+            {
+                "url": "www.ciriec.ulg.ac.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.crv4all.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.sefi.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.yourcoach.be",
+                "version": "-1"
+            },
+            {
+                "url": "perso.uclouvain.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.d-pac.be",
+                "version": "4.1.1"
+            },
+            {
+                "url": "www.reseaualto.be",
+                "version": "4.7"
+            },
+            {
+                "url": "cvn.be",
+                "version": "-1"
+            },
+            {
+                "url": "cpma-ulg.be",
+                "version": "-1"
+            },
+            {
+                "url": "eurofinish.be",
+                "version": "4.5.4"
+            },
+            {
+                "url": "www.sleepclinic.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.euroconsulting.be",
+                "version": "4.3.1"
+            },
+            {
+                "url": "www.sleepclinic.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.andredecoster.be",
+                "version": "4.7"
+            },
+            {
+                "url": "kuleuven.sim2.be",
+                "version": "4.5.9"
+            },
+            {
+                "url": "www.uclep.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.pneuband.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.uclep.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.optec.be",
+                "version": "-1"
+            },
+            {
+                "url": "pilotcorner.be",
+                "version": "-1"
+            },
+            {
+                "url": "villavespa.be",
+                "version": "3.4.1"
+            },
+            {
+                "url": "www.eurotan.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www2.thaiembassy.be",
+                "version": "3.5.1"
+            },
+            {
+                "url": "biomar.ulb.ac.be",
+                "version": "4.7"
+            },
+            {
+                "url": "sites.uclouvain.be",
+                "version": "-1"
+            },
+            {
+                "url": "uclep.be",
+                "version": "4.7"
+            },
+            {
+                "url": "ipisresearch.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.socius.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.teleson.be",
+                "version": "-1"
+            },
+            {
+                "url": "essensciaforsustainability.be",
+                "version": "4.7"
+            },
+            {
+                "url": "infordrogues.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.egmontinstitute.be",
+                "version": "-1"
+            },
+            {
+                "url": "copsresearchgroup.be",
+                "version": "4.5.2"
+            },
+            {
+                "url": "antor.uantwerpen.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.esf.be",
+                "version": "-1"
+            },
+            {
+                "url": "ipbo.vib-ugent.be",
+                "version": "4.1.18"
+            },
+            {
+                "url": "www.empiricalmacroworkshop.ugent.be",
+                "version": "4.5.9"
+            },
+            {
+                "url": "lphys.ulb.ac.be",
+                "version": "4.7"
+            },
+            {
+                "url": "labos.ulg.ac.be",
+                "version": "4.7"
+            },
+            {
+                "url": "profem.be",
+                "version": "-1"
+            },
+            {
+                "url": "belhyp.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.corpfin.ugent.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.unicef.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.wcs-belgie.be",
+                "version": "4.2.15"
+            },
+            {
+                "url": "demarketinggroep.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.ziekenhuissterfte.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.securelink.be",
+                "version": "-1"
+            },
+            {
+                "url": "nederlandsvt.debeel.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.tiii.be",
+                "version": "3.4.2"
+            },
+            {
+                "url": "bscheid.ulb.ac.be",
+                "version": "4.2.15"
+            },
+            {
+                "url": "www.innovationtoday.ugent.be",
+                "version": "4.1.18"
+            },
+            {
+                "url": "reno-isol.be",
+                "version": "-1"
+            },
+            {
+                "url": "feb.kuleuven.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.ziekenhuissterfte.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.info-suicide.be",
+                "version": "-1"
+            },
+            {
+                "url": "wijzer.howest.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.csi.ugent.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.erikdesoir.be",
+                "version": "-1"
+            },
+            {
+                "url": "zachmann.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.efc.be",
+                "version": "-1"
+            },
+            {
+                "url": "institut-mindfulness.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.kristoflodewijks.be",
+                "version": "4.7"
+            },
+            {
+                "url": "schoolpsychologie-vvsp.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.iweps.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.jihel.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.sla-newflavours.ugent.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.rmedia.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.abc-web.be",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.chirurgie-waregem.be",
+                "version": "4.3.11"
+            },
+            {
+                "url": "www.macryan.be",
+                "version": "4.2.2"
+            },
+            {
+                "url": "materiauxdeconstructiondapresguerre.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.besedim.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.whoist.be",
+                "version": "-1"
+            },
+            {
+                "url": "blog.lael.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.oudedokken.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.ethiekenmaatschappij.ugent.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.fapeo.be",
+                "version": "-1"
+            },
+            {
+                "url": "napoleonbonaparte.be",
+                "version": "4.7"
+            },
+            {
+                "url": "www.regas.be",
+                "version": "-1"
+            },
+            {
+                "url": "politika.be",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.deviaenegp.be",
+                "version": "4.4.10"
+            },
+            {
+                "url": "www.fashiongallery.be",
+                "version": "-1"
+            },
+            {
+                "url": "www.jeroencluckers.be",
+                "version": "-1"
+            },
+            {
+                "url": "decastillo.be",
+                "version": "-1"
+            }
+        ],
+        "ch": [
+            {
+                "url": "www.gcf.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.occupyzuerich.ch",
+                "version": "4.0.18"
+            },
+            {
+                "url": "betterwork.ch",
+                "version": "-1"
+            },
+            {
+                "url": "cmt-qo.phys.ethz.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "betterwork.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.chronobiology.ch",
+                "version": "4.4.10"
+            },
+            {
+                "url": "forscenter.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.chronobiology.ch",
+                "version": "4.4.10"
+            },
+            {
+                "url": "www3.unifr.ch",
+                "version": "-1"
+            },
+            {
+                "url": "hafezi.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "www.consortium.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "nanoscience.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "foodward.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.photoforumpasquart.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "hb9lu.ch",
+                "version": "-1"
+            },
+            {
+                "url": "metaanalysen.ch",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.bsl-lausanne.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "metaanalysen.ch",
+                "version": "4.6.6"
+            },
+            {
+                "url": "lenews.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "nanolive.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "www.imtag.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.gcf.ch",
+                "version": "-1"
+            },
+            {
+                "url": "confjeri.ch",
+                "version": "-1"
+            },
+            {
+                "url": "procivis.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "www.tier-im-fokus.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.bitoubi.ch",
+                "version": "-1"
+            },
+            {
+                "url": "stockerlab.ethz.ch",
+                "version": "4.4.10"
+            },
+            {
+                "url": "blog.wbkolleg.unibe.ch",
+                "version": "3.5.1"
+            },
+            {
+                "url": "www.antenna.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.svmed.ch",
+                "version": "-1"
+            },
+            {
+                "url": "saintecroix-relax.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.elternlobby.ch",
+                "version": "-1"
+            },
+            {
+                "url": "lucas-beck.ch",
+                "version": "-1"
+            },
+            {
+                "url": "danielarber.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "adreventura.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "www.promfr.ch",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.diceproject.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "oceangrabbing.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.digitaleschweiz.ch",
+                "version": "4.4.10"
+            },
+            {
+                "url": "www.zpth.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "commons.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "www.tcm-estherdenz.ch",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.stragen.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "cms.unige.ch",
+                "version": "-1"
+            },
+            {
+                "url": "institut-kunst.ch",
+                "version": "-1"
+            },
+            {
+                "url": "scbf.ch",
+                "version": "4.2.4"
+            },
+            {
+                "url": "www.fondaction.ch",
+                "version": "-1"
+            },
+            {
+                "url": "ihrc.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "www.banccentraldecatalunya.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.ia.arch.ethz.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "stockerlab.ethz.ch",
+                "version": "4.4.10"
+            },
+            {
+                "url": "www.skeptiker.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "edu.somedia-buchverlag.ch",
+                "version": "4.0.18"
+            },
+            {
+                "url": "www.issibern.ch",
+                "version": "-1"
+            },
+            {
+                "url": "v1.tobiashauser.ch",
+                "version": "-1"
+            },
+            {
+                "url": "parkinson-team.ch",
+                "version": "-1"
+            },
+            {
+                "url": "dimetix.ch",
+                "version": "-1"
+            },
+            {
+                "url": "nova-logic.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "www.finance20.ch",
+                "version": "4.2.15"
+            },
+            {
+                "url": "biologie.unige.ch",
+                "version": "-1"
+            },
+            {
+                "url": "netfuture.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.wolf-linder.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "offiziere.ch",
+                "version": "-1"
+            },
+            {
+                "url": "qss-solutions.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "baertiming.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "hci.epfl.ch",
+                "version": "3.8.1"
+            },
+            {
+                "url": "www.cc-ti.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.paarlife.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.science-journalism.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "jean-monnet.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "wcrc.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.associationtdah-impulse.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "bws-schweiz.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.lereseau.ch",
+                "version": "4.5.9"
+            },
+            {
+                "url": "www.scimabio.ch",
+                "version": "-1"
+            },
+            {
+                "url": "esrel2015.ethz.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.cenas.ch",
+                "version": "-1"
+            },
+            {
+                "url": "smartec.ch",
+                "version": "-1"
+            },
+            {
+                "url": "meikirch-modell.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "baslerafrika.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "pharmadom.ch",
+                "version": "-1"
+            },
+            {
+                "url": "mas.caad.arch.ethz.ch",
+                "version": "-1"
+            },
+            {
+                "url": "ronsorg.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "www.workshop.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.bitcoinnews.ch",
+                "version": "4.4.1"
+            },
+            {
+                "url": "gemresearch.ch",
+                "version": "-1"
+            },
+            {
+                "url": "infekt.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.bitstoenergy.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "creationsiteinternet.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "telscom.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.geneva-summit-on-sustainable-finance.ch",
+                "version": "-1"
+            },
+            {
+                "url": "cemios.ch",
+                "version": "4.3.11"
+            },
+            {
+                "url": "addictohug.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.totalbrain.ch",
+                "version": "-1"
+            },
+            {
+                "url": "s-endo.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "atmss.epfl.ch",
+                "version": "4.4.10"
+            },
+            {
+                "url": "optec.ch",
+                "version": "4.7"
+            },
+            {
+                "url": "www.sacc.ch",
+                "version": "-1"
+            },
+            {
+                "url": "albycarta.ch",
+                "version": "-1"
+            },
+            {
+                "url": "www.ideascentre.ch",
+                "version": "3.6"
+            }
+        ],
+        "cy": [
+            {
+                "url": "egrie2016.ucy.ac.cy",
+                "version": "4.3.1"
+            },
+            {
+                "url": "www.cs.ucy.ac.cy",
+                "version": "-1"
+            },
+            {
+                "url": "acb.com.cy",
+                "version": "4.7"
+            },
+            {
+                "url": "web.cut.ac.cy",
+                "version": "4.7"
+            },
+            {
+                "url": "psm.ucy.ac.cy",
+                "version": "4.3.1"
+            },
+            {
+                "url": "web.cut.ac.cy",
+                "version": "4.7"
+            },
+            {
+                "url": "web.cut.ac.cy",
+                "version": "4.7"
+            }
+        ],
+        "cz": [
+            {
+                "url": "olinco.upol.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "ctpsr.econ.muni.cz",
+                "version": "3.9.1"
+            },
+            {
+                "url": "oltk.upol.cz",
+                "version": "3.2.1"
+            },
+            {
+                "url": "www.amo.cz",
+                "version": "-1"
+            },
+            {
+                "url": "ces.vse.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.med.muni.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.spolecenskaodpovednostfirem.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "diverzita.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.development.upol.cz",
+                "version": "-1"
+            },
+            {
+                "url": "journals.vstecb.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "geography.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.statspol.cz",
+                "version": "-1"
+            },
+            {
+                "url": "kie.vse.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "www.ces.upol.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "geography.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.lente.cz",
+                "version": "4.2.5"
+            },
+            {
+                "url": "www.eeip.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.fors.cz",
+                "version": "4.6.6"
+            },
+            {
+                "url": "iclr.upol.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.smart-con.cz",
+                "version": "-1"
+            },
+            {
+                "url": "michalblaha.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.volebnistudia.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "www.mediatenor.cz",
+                "version": "4.2.15"
+            },
+            {
+                "url": "www.naturcomp.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "letani.vsb.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "ceeconference.vse.cz",
+                "version": "3.9.1"
+            },
+            {
+                "url": "www.transparency.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "soced.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "www.psychowalkman.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.hologic.cz",
+                "version": "3.3.1"
+            },
+            {
+                "url": "asap.ite.tul.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.dbv-itl.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "fundraising.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "www.arup.cas.cz",
+                "version": "3.1.1"
+            },
+            {
+                "url": "labgis.ibot.cas.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "www.ceskyfocalpoint.cz",
+                "version": "4.3.3"
+            },
+            {
+                "url": "webhosting.vse.cz",
+                "version": "-1"
+            },
+            {
+                "url": "alenasolcova.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "www.isea.cz",
+                "version": "4.2.15"
+            },
+            {
+                "url": "fir.vse.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "exospace.cz",
+                "version": "-1"
+            },
+            {
+                "url": "imes.vse.cz",
+                "version": "3.9.1"
+            },
+            {
+                "url": "kps.ff.cuni.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "www.cjv.muni.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "havel.mojeservery.cz",
+                "version": "4.1.18"
+            },
+            {
+                "url": "moramedica.cz",
+                "version": "4.0.18"
+            },
+            {
+                "url": "www.csim.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www1.osu.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.cisok.cz",
+                "version": "3.8.11"
+            },
+            {
+                "url": "amber.feld.cvut.cz",
+                "version": "-1"
+            },
+            {
+                "url": "baloun.entu.cas.cz",
+                "version": "-1"
+            },
+            {
+                "url": "itsmf.cz",
+                "version": "4.2.15"
+            },
+            {
+                "url": "nf.vse.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "www.amo.cz",
+                "version": "-1"
+            },
+            {
+                "url": "nova-ekonomika.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.elisch.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.ita-tech.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.pojivo.cz",
+                "version": "-1"
+            },
+            {
+                "url": "loschmidt.chemi.muni.cz",
+                "version": "-1"
+            },
+            {
+                "url": "pes.ff.cuni.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "plynomery.cz",
+                "version": "-1"
+            },
+            {
+                "url": "araneatechnology.cz",
+                "version": "4.3.11"
+            },
+            {
+                "url": "www.mlmu.cz",
+                "version": "4.6.6"
+            },
+            {
+                "url": "fi.nm.cz",
+                "version": "4.1.18"
+            },
+            {
+                "url": "sites.ff.cuni.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "fraxinus.mendelu.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.usd.cas.cz",
+                "version": "4.6.1"
+            },
+            {
+                "url": "www.itspy.cz",
+                "version": "-1"
+            },
+            {
+                "url": "splab.cz",
+                "version": "-1"
+            },
+            {
+                "url": "bmeg.fel.cvut.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "splab.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.imunodeficience.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "www.evropskehodnoty.cz",
+                "version": "4.6.6"
+            },
+            {
+                "url": "keke.vse.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "agents.fel.cvut.cz",
+                "version": "-1"
+            },
+            {
+                "url": "eujem.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "kpskonference.ff.cuni.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "fph.vse.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "eppd13.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "cenars.upol.cz",
+                "version": "3.5.1"
+            },
+            {
+                "url": "www.vyzivaspol.cz",
+                "version": "-1"
+            },
+            {
+                "url": "www.faaccz.cz",
+                "version": "-1"
+            },
+            {
+                "url": "sites.ff.cuni.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "www.czechlit.cz",
+                "version": "4.2.4"
+            },
+            {
+                "url": "soft-eng.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "new.uss.upol.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "lsff.cz",
+                "version": "4.3.11"
+            },
+            {
+                "url": "smos.cz",
+                "version": "4.0.18"
+            },
+            {
+                "url": "www.demas.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "www.noirfilmfestival.cz",
+                "version": "-1"
+            },
+            {
+                "url": "glopolis.devel-2046.cz",
+                "version": "-1"
+            },
+            {
+                "url": "vsers.cz",
+                "version": "-1"
+            },
+            {
+                "url": "mosteckejezero.cz",
+                "version": "-1"
+            },
+            {
+                "url": "khp.vse.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "iva.k.utb.cz",
+                "version": "3.2.1"
+            },
+            {
+                "url": "ukes.cz",
+                "version": "3.8.1"
+            },
+            {
+                "url": "www.cus.cz",
+                "version": "4.7"
+            },
+            {
+                "url": "acta.upol.cz",
+                "version": "3.0.1"
+            },
+            {
+                "url": "acta.upol.cz",
+                "version": "3.0.1"
+            },
+            {
+                "url": "www.vtei.cz",
+                "version": "4.5.9"
+            }
+        ],
+        "de": [
+            {
+                "url": "www.landhaus-debur.de",
+                "version": "4.7"
+            },
+            {
+                "url": "weberstorekassel.de",
+                "version": "4.7"
+            },
+            {
+                "url": "rottenkinckschow.de",
+                "version": "4.2.7"
+            },
+            {
+                "url": "www.anne-frank-gymnasium.de",
+                "version": "4.7"
+            },
+            {
+                "url": "www.dref.de",
+                "version": "-1"
+            },
+            {
+                "url": "www.anne-frank-gymnasium.de",
+                "version": "4.7"
+            },
+            {
+                "url": "test2.raobermaier.de",
+                "version": "4.7"
+            },
+            {
+                "url": "tir-training.de",
+                "version": "4.4.1"
+            },
+            {
+                "url": "www.ffpr.de",
+                "version": "4.7"
+            },
+            {
+                "url": "ingmarweber.de",
+                "version": "4.7"
+            },
+            {
+                "url": "www.ged-project.de",
+                "version": "4.5.3"
+            },
+            {
+                "url": "www.bcll.uni-bremen.de",
+                "version": "-1"
+            },
+            {
+                "url": "www.bfinance.de",
+                "version": "4.7"
+            },
+            {
+                "url": "www.th-ewersbach.de",
+                "version": "4.5.9"
+            },
+            {
+                "url": "www.subsahara-afrika-ihk.de",
+                "version": "-1"
+            },
+            {
+                "url": "weltrisikobericht.de",
+                "version": "4.7"
+            },
+            {
+                "url": "pvspeicher.htw-berlin.de",
+                "version": "4.7"
+            },
+            {
+                "url": "www.tbraeuninger.de",
+                "version": "4.4.10"
+            },
+            {
+                "url": "www.ged-project.de",
+                "version": "4.5.3"
+            },
+            {
+                "url": "ina-trier.de",
+                "version": "4.5.9"
+            },
+            {
+                "url": "cellgym-ep.de",
+                "version": "-1"
+            },
+            {
+                "url": "www.stroeermediabrands.de",
+                "version": "4.7"
+            },
+            {
+                "url": "www.rene-pickhardt.de",
+                "version": "3.4.1"
+            },
+            {
+                "url": "acfe.de",
+                "version": "4.7"
+            },
+            {
+                "url": "www.reser2011.de",
+                "version": "-1"
+            },
+            {
+                "url": "www.bartneck.de",
+                "version": "4.7"
+            },
+            {
+                "url": "www.alexander-schleicher.de",
+                "version": "4.7"
+            },
+            {
+                "url": "www.i-d-e.de",
+                "version": "-1"
+            },
+            {
+                "url": "www.medlife-ev.de",
+                "version": "4.4.10"
+            },
+            {
+                "url": "topo-houches.pks.mpg.de",
+                "version": "4.7"
+            },
+            {
+                "url": "www.landscapeonline.de",
+                "version": "4.7"
+            },
+            {
+                "url": "www.kulturwirtschaft.de",
+                "version": "4.7"
+            },
+            {
+                "url": "www.websiteerstellen-seo.de",
+                "version": "4.7"
+            },
+            {
+                "url": "ye-olde-owlbear.de",
+                "version": "-1"
+            },
+            {
+                "url": "gehoerlosennetzwerk.de",
+                "version": "3.8.2"
+            }
+        ],
+        "dk": [
+            {
+                "url": "emilkirkegaard.dk",
+                "version": "-1"
+            },
+            {
+                "url": "soundquiz.dk",
+                "version": "-1"
+            },
+            {
+                "url": "xn--drmstrre-64ad.dk",
+                "version": "4.0.18"
+            },
+            {
+                "url": "emilkirkegaard.dk",
+                "version": "-1"
+            },
+            {
+                "url": "www.d2i.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "care.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "brugfolkeskolen.dk",
+                "version": "4.1.18"
+            },
+            {
+                "url": "moelhave.dk",
+                "version": "-1"
+            },
+            {
+                "url": "kreativproces.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "www.sohansen.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "www.sa.dk",
+                "version": "4.1"
+            },
+            {
+                "url": "www.cycling-embassy.dk",
+                "version": "4.5.9"
+            },
+            {
+                "url": "www.dieselhouse.dk",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.daff.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "ojenklinikken.dk",
+                "version": "3.4.2"
+            },
+            {
+                "url": "www.sexueltrivsel.dk",
+                "version": "-1"
+            },
+            {
+                "url": "www.academia.dk",
+                "version": "-1"
+            },
+            {
+                "url": "hjernerystelsesforeningen.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "nfbo.org.linux85.wannafindserver.dk",
+                "version": "4.6.1"
+            },
+            {
+                "url": "www.videncenterforallergi.dk",
+                "version": "-1"
+            },
+            {
+                "url": "acrm.dk",
+                "version": "4.4.10"
+            },
+            {
+                "url": "www.i-m-s.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "cleanclothes.dk",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.rambollfonden.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "lazza.dk",
+                "version": "-1"
+            },
+            {
+                "url": "fishingzealand.dk",
+                "version": "-1"
+            },
+            {
+                "url": "www.comm-research.dk",
+                "version": "3.5.1"
+            },
+            {
+                "url": "medidyne.dk",
+                "version": "-1"
+            },
+            {
+                "url": "seminarer.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "seaband.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "tpcmanagement.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "4mativ.dk",
+                "version": "2.9.1"
+            },
+            {
+                "url": "www.nfcura.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "komaelk.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "bebego.dk",
+                "version": "3.5.1"
+            },
+            {
+                "url": "safeexit.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "cnru.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "policymonitor.webhouse.dk",
+                "version": "4.4.5"
+            },
+            {
+                "url": "info.skolesundhed.dk",
+                "version": "4.1.18"
+            },
+            {
+                "url": "osteosyntese.dk",
+                "version": "4.0.18"
+            },
+            {
+                "url": "helmuthnyborg.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "nqo.sdu.dk",
+                "version": "-1"
+            },
+            {
+                "url": "www.deltaonline.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "hengreen.dk",
+                "version": "-1"
+            },
+            {
+                "url": "www.jespermosegaard.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "www.klimabevaegelsen.dk",
+                "version": "-1"
+            },
+            {
+                "url": "mikkelrj.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "ostergren.dk",
+                "version": "4.5.9"
+            },
+            {
+                "url": "aarsrapporter.dk",
+                "version": "-1"
+            },
+            {
+                "url": "elsasscenter.dk",
+                "version": "-1"
+            },
+            {
+                "url": "aske.mottelson.dk",
+                "version": "4.5.2"
+            },
+            {
+                "url": "abc-medicare.dk",
+                "version": "4.4.10"
+            },
+            {
+                "url": "www.polaris-as.dk",
+                "version": "-1"
+            },
+            {
+                "url": "www.mm.dk",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.birdresearch.dk",
+                "version": "3.9.19"
+            },
+            {
+                "url": "www.kallermann.dk",
+                "version": "4.5.6"
+            },
+            {
+                "url": "host.javanielsen.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "jokabsafety.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "www.tang-thorkil.dk",
+                "version": "4.1.18"
+            },
+            {
+                "url": "isps-dk.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "www.gymnasieforskning.dk",
+                "version": "4.7"
+            },
+            {
+                "url": "www.flamingoeffekten.dk",
+                "version": "3.5"
+            }
+        ],
+        "fl": [],
+        "fr": [
+            {
+                "url": "www.iaa-lorraine.fr",
+                "version": "4.7"
+            },
+            {
+                "url": "haterz.fr",
+                "version": "-1"
+            },
+            {
+                "url": "www.fredericcompain.fr",
+                "version": "4.2.7"
+            },
+            {
+                "url": "esat-etai.fr",
+                "version": "3.5.1"
+            },
+            {
+                "url": "www.rywal.fr",
+                "version": "-1"
+            }
+        ],
+        "gr": [
+            {
+                "url": "www.communicationfactory.gr",
+                "version": "4.4.1"
+            },
+            {
+                "url": "www.menon.org.gr",
+                "version": "4.6.1"
+            },
+            {
+                "url": "www.communicationfactory.gr",
+                "version": "4.4.1"
+            }
+        ],
+        "ht": [],
+        "hu": [
+            {
+                "url": "transparency.hu",
+                "version": "4.3"
+            },
+            {
+                "url": "cms.talaj.hu",
+                "version": "3.6"
+            },
+            {
+                "url": "dex.hu",
+                "version": "-1"
+            },
+            {
+                "url": "jmsz.hu",
+                "version": "-1"
+            },
+            {
+                "url": "elhizastudomany.hu",
+                "version": "-1"
+            },
+            {
+                "url": "lab-comp.hu",
+                "version": "-1"
+            },
+            {
+                "url": "drogfokuszpont.hu",
+                "version": "-1"
+            },
+            {
+                "url": "semmelweis-kutatoegyetem.hu",
+                "version": "-1"
+            },
+            {
+                "url": "ceid.hu",
+                "version": "4.5.9"
+            },
+            {
+                "url": "hernadent.hu",
+                "version": "4.7"
+            },
+            {
+                "url": "husse-esse.hu",
+                "version": "4.7"
+            },
+            {
+                "url": "evolecol.hu",
+                "version": "4.3"
+            },
+            {
+                "url": "pannonialub.hu",
+                "version": "-1"
+            },
+            {
+                "url": "www.mellimplant.hu",
+                "version": "-1"
+            },
+            {
+                "url": "www.mri.hu",
+                "version": "4.7"
+            },
+            {
+                "url": "www.gammadigital.hu",
+                "version": "4.5.8"
+            },
+            {
+                "url": "www.gki.hu",
+                "version": "-1"
+            },
+            {
+                "url": "scholar.semmelweis.hu",
+                "version": "-1"
+            },
+            {
+                "url": "per-form.hu",
+                "version": "-1"
+            },
+            {
+                "url": "proprogressio.hu",
+                "version": "-1"
+            },
+            {
+                "url": "www.cp-analitika.hu",
+                "version": "-1"
+            },
+            {
+                "url": "ornithology.limnologia.hu",
+                "version": "4.7"
+            },
+            {
+                "url": "lcrnorcom.pe.hu",
+                "version": "4.7"
+            },
+            {
+                "url": "vulcano-research-group.hu",
+                "version": "3.5.1"
+            },
+            {
+                "url": "www.belvedere-meridionale.hu",
+                "version": "3.6"
+            },
+            {
+                "url": "competitio.unideb.hu",
+                "version": "4.3"
+            },
+            {
+                "url": "pannonpolus.hu",
+                "version": "4.6.6"
+            },
+            {
+                "url": "ivsz.hu",
+                "version": "-1"
+            },
+            {
+                "url": "www.engpsych.elte.hu",
+                "version": "3.6"
+            },
+            {
+                "url": "www.25nap.hu",
+                "version": "4.5.9"
+            },
+            {
+                "url": "regi.tf.hu",
+                "version": "3.0"
+            },
+            {
+                "url": "tf.hu",
+                "version": "-1"
+            },
+            {
+                "url": "renaissance.elte.hu",
+                "version": "3.4.2"
+            },
+            {
+                "url": "hecon.uni-corvinus.hu",
+                "version": "3.6"
+            },
+            {
+                "url": "ncoe.hu",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.honlapkeszites-weblapkeszites.hu",
+                "version": "-1"
+            },
+            {
+                "url": "www.typoslave.hu",
+                "version": "2.1"
+            },
+            {
+                "url": "oriole.hu",
+                "version": "-1"
+            }
+        ],
+        "ie": [
+            {
+                "url": "www.redcresearch.ie",
+                "version": "4.7"
+            },
+            {
+                "url": "csponline.ie",
+                "version": "4.1.18"
+            },
+            {
+                "url": "donegalvec.ie",
+                "version": "4.2.15"
+            },
+            {
+                "url": "ncse.ie",
+                "version": "4.2.15"
+            },
+            {
+                "url": "donegalvec.ie",
+                "version": "4.2.15"
+            },
+            {
+                "url": "health.gov.ie",
+                "version": "4.7"
+            },
+            {
+                "url": "www.per.gov.ie",
+                "version": "4.7"
+            },
+            {
+                "url": "eastcfram.irish-surge-forecast.ie",
+                "version": "3.1.4"
+            },
+            {
+                "url": "taxpolicy.gov.ie",
+                "version": "4.2.2"
+            },
+            {
+                "url": "www.cluid.ie",
+                "version": "4.7"
+            },
+            {
+                "url": "www.nationaltransport.ie",
+                "version": "4.7"
+            },
+            {
+                "url": "www.wdc.ie",
+                "version": "-1"
+            },
+            {
+                "url": "www.nuigalway.ie",
+                "version": "-1"
+            },
+            {
+                "url": "www.northridgehouse.ie",
+                "version": "-1"
+            },
+            {
+                "url": "www.opw.ie",
+                "version": "-1"
+            },
+            {
+                "url": "www.irlogi.ie",
+                "version": "4.4.10"
+            },
+            {
+                "url": "www.tipperary-coop.ie",
+                "version": "4.7"
+            },
+            {
+                "url": "www.nepp.ie",
+                "version": "-1"
+            },
+            {
+                "url": "imj.ie",
+                "version": "4.2.15"
+            },
+            {
+                "url": "www.biodiversityireland.ie",
+                "version": "-1"
+            },
+            {
+                "url": "www.horsesportireland.ie",
+                "version": "-1"
+            },
+            {
+                "url": "www.trionoide.ie",
+                "version": "4.0.18"
+            },
+            {
+                "url": "www.fertilizer-assoc.ie",
+                "version": "-1"
+            },
+            {
+                "url": "www.anam-cap.ie",
+                "version": "4.5.9"
+            },
+            {
+                "url": "www.focusireland.ie",
+                "version": "-1"
+            },
+            {
+                "url": "www.irspen.ie",
+                "version": "4.2.15"
+            },
+            {
+                "url": "icep.ie",
+                "version": "3.9.2"
+            },
+            {
+                "url": "www.fiscalcouncil.ie",
+                "version": "4.7"
+            },
+            {
+                "url": "infonomics-society.ie",
+                "version": "4.4.2"
+            },
+            {
+                "url": "ipu.ie",
+                "version": "-1"
+            },
+            {
+                "url": "genealogy.ie",
+                "version": "4.7"
+            },
+            {
+                "url": "www.theunlockshop.ie",
+                "version": "-1"
+            }
+        ],
+        "is": [
+            {
+                "url": "sidmennt.is",
+                "version": "-1"
+            },
+            {
+                "url": "www.almenni.is",
+                "version": "4.7"
+            },
+            {
+                "url": "ams.hi.is",
+                "version": "-1"
+            },
+            {
+                "url": "svth.is",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.hafogvatn.is",
+                "version": "-1"
+            },
+            {
+                "url": "islandsmyndir.is",
+                "version": "4.4.10"
+            },
+            {
+                "url": "www.rafmidlun.is",
+                "version": "4.1.18"
+            },
+            {
+                "url": "vu2058.lanterman.1984.is",
+                "version": "4.7"
+            },
+            {
+                "url": "www.lmi.is",
+                "version": "4.6.6"
+            },
+            {
+                "url": "millimala.hi.is",
+                "version": "-1"
+            },
+            {
+                "url": "fjolbreyttforysta.is",
+                "version": "4.1.18"
+            },
+            {
+                "url": "ams.hi.is",
+                "version": "-1"
+            },
+            {
+                "url": "www.mentiscura.is",
+                "version": "-1"
+            },
+            {
+                "url": "brimrun.is",
+                "version": "4.7"
+            },
+            {
+                "url": "www.atthing.is",
+                "version": "4.7"
+            },
+            {
+                "url": "www.chi.is",
+                "version": "-1"
+            },
+            {
+                "url": "serefni.is",
+                "version": "4.6.6"
+            },
+            {
+                "url": "ams.hi.is",
+                "version": "-1"
+            },
+            {
+                "url": "algo.is",
+                "version": "4.7"
+            },
+            {
+                "url": "serefni.is",
+                "version": "4.6.6"
+            },
+            {
+                "url": "algo.is",
+                "version": "4.7"
+            },
+            {
+                "url": "www.icelandictravelmarket.is",
+                "version": "-1"
+            },
+            {
+                "url": "www.icelandictravelmarket.is",
+                "version": "-1"
+            },
+            {
+                "url": "rse.hi.is",
+                "version": "-1"
+            },
+            {
+                "url": "natturufraedi.fludaskoli.is",
+                "version": "4.7"
+            },
+            {
+                "url": "fum.is",
+                "version": "3.4.2"
+            },
+            {
+                "url": "www.thco.is",
+                "version": "-1"
+            }
+        ],
+        "it": [
+            {
+                "url": "www.sipotra.it",
+                "version": "3.6.1"
+            },
+            {
+                "url": "www.notizialocale.it",
+                "version": "-1"
+            },
+            {
+                "url": "www.agameofthrones.it",
+                "version": "4.6.4"
+            }
+        ],
+        "lu": [
+            {
+                "url": "drefa.lu",
+                "version": "-1"
+            },
+            {
+                "url": "bip.lu",
+                "version": "-1"
+            },
+            {
+                "url": "www.alk.lu",
+                "version": "-1"
+            },
+            {
+                "url": "bip.lu",
+                "version": "-1"
+            },
+            {
+                "url": "www.consortium.lu",
+                "version": "4.7"
+            },
+            {
+                "url": "www.ibbl.lu",
+                "version": "4.7"
+            },
+            {
+                "url": "itgl.lu",
+                "version": "4.7"
+            },
+            {
+                "url": "www.interlycees.lu",
+                "version": "-1"
+            },
+            {
+                "url": "www.batipol.lu",
+                "version": "-1"
+            },
+            {
+                "url": "www.pisaluxembourg.lu",
+                "version": "4.7"
+            },
+            {
+                "url": "ssm.lu",
+                "version": "4.7"
+            },
+            {
+                "url": "ssm.lu",
+                "version": "4.7"
+            },
+            {
+                "url": "ssm.lu",
+                "version": "4.7"
+            }
+        ],
+        "ma": [
+            {
+                "url": "www.emi.ac.ma",
+                "version": "-1"
+            },
+            {
+                "url": "www.israbat.ac.ma",
+                "version": "-1"
+            },
+            {
+                "url": "www.erasmusplus-morocco.ma",
+                "version": "-1"
+            },
+            {
+                "url": "www.israbat.ac.ma",
+                "version": "-1"
+            },
+            {
+                "url": "www.isesco.org.ma",
+                "version": "4.3.1"
+            },
+            {
+                "url": "www.makinse.ma",
+                "version": "-1"
+            },
+            {
+                "url": "www.isesco.org.ma",
+                "version": "4.3.1"
+            },
+            {
+                "url": "www.ires.ma",
+                "version": "-1"
+            },
+            {
+                "url": "www.isesco.org.ma",
+                "version": "4.3.1"
+            },
+            {
+                "url": "neppo.nindo.ma",
+                "version": "-1"
+            },
+            {
+                "url": "www.isesco.org.ma",
+                "version": "4.3.1"
+            },
+            {
+                "url": "www.microfinance.ma",
+                "version": "-1"
+            },
+            {
+                "url": "fmpo.ump.ma",
+                "version": "-1"
+            },
+            {
+                "url": "www.microfinance.ma",
+                "version": "-1"
+            }
+        ],
+        "mc": [],
+        "nl": [
+            {
+                "url": "www.bloemaert.nl",
+                "version": "4.1.18"
+            },
+            {
+                "url": "blog.dutchworks.nl",
+                "version": "4.7"
+            },
+            {
+                "url": "www.ids-uva.nl",
+                "version": "-1"
+            },
+            {
+                "url": "www.catenaccio.nl",
+                "version": "4.7"
+            },
+            {
+                "url": "www.gercorietveld.nl",
+                "version": "4.7"
+            },
+            {
+                "url": "devpsychopathologyru.nl",
+                "version": "-1"
+            },
+            {
+                "url": "framerframed.nl",
+                "version": "-1"
+            },
+            {
+                "url": "www.fysiologic.nl",
+                "version": "-1"
+            },
+            {
+                "url": "kunststofkringloop.nl",
+                "version": "4.7"
+            },
+            {
+                "url": "teachnederland.nl",
+                "version": "4.5.9"
+            },
+            {
+                "url": "www.stoerebouwers.nl",
+                "version": "-1"
+            },
+            {
+                "url": "www.quilt-online.nl",
+                "version": "-1"
+            },
+            {
+                "url": "studentenpastoraat-nederland.nl",
+                "version": "-1"
+            }
+        ],
+        "no": [
+            {
+                "url": "www.floriss.no",
+                "version": "4.5.9"
+            },
+            {
+                "url": "teknamagasinet.no",
+                "version": "4.7"
+            },
+            {
+                "url": "www.floriss.no",
+                "version": "4.5.9"
+            },
+            {
+                "url": "teknamagasinet.no",
+                "version": "4.7"
+            },
+            {
+                "url": "www.savalen.no",
+                "version": "4.7"
+            },
+            {
+                "url": "www.hagagolf.no",
+                "version": "4.7"
+            },
+            {
+                "url": "www.savalen.no",
+                "version": "4.7"
+            },
+            {
+                "url": "www.tradesolution.no",
+                "version": "4.7"
+            },
+            {
+                "url": "www.medicus.no",
+                "version": "-1"
+            },
+            {
+                "url": "www.tradesolution.no",
+                "version": "4.7"
+            },
+            {
+                "url": "www.grueturneringen.no",
+                "version": "4.7"
+            },
+            {
+                "url": "sprellopp.no",
+                "version": "4.7"
+            },
+            {
+                "url": "www.kommunalresponssentertjeneste.no",
+                "version": "4.7"
+            },
+            {
+                "url": "www.ordentligradio.no",
+                "version": "4.7"
+            },
+            {
+                "url": "www.teskje.no",
+                "version": "3.9.18"
+            },
+            {
+                "url": "www.tifviking.no",
+                "version": "4.7"
+            },
+            {
+                "url": "lillemane.no",
+                "version": "4.7"
+            },
+            {
+                "url": "nerdrumpictures.no",
+                "version": "4.7"
+            },
+            {
+                "url": "www.miljoepeis.no",
+                "version": "4.5.9"
+            }
+        ],
+        "pt": [
+            {
+                "url": "www.aica.pt",
+                "version": "-1"
+            },
+            {
+                "url": "www.spg.pt",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.bronzedourado.pt",
+                "version": "4.1.18"
+            },
+            {
+                "url": "www.aica.pt",
+                "version": "-1"
+            },
+            {
+                "url": "alteracoesclimaticas.ics.ulisboa.pt",
+                "version": "4.6.1"
+            },
+            {
+                "url": "www.belasartes.ulisboa.pt",
+                "version": "3.4"
+            },
+            {
+                "url": "gulbenkian.pt",
+                "version": "-1"
+            },
+            {
+                "url": "www.sxf.uevora.pt",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.cfp.pt",
+                "version": "3.4.1"
+            },
+            {
+                "url": "www.alimentacaosaudavel.dgs.pt",
+                "version": "-1"
+            },
+            {
+                "url": "labnt.novaims.unl.pt",
+                "version": "4.5.9"
+            },
+            {
+                "url": "www.fngis.pt",
+                "version": "3.9.19"
+            },
+            {
+                "url": "apcrsi.pt",
+                "version": "-1"
+            },
+            {
+                "url": "josetavares.pt",
+                "version": "4.4.10"
+            },
+            {
+                "url": "www.crescimentoverde.gov.pt",
+                "version": "4.0"
+            },
+            {
+                "url": "paginas.fe.up.pt",
+                "version": "-1"
+            },
+            {
+                "url": "idl.campus.ciencias.ulisboa.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "www.acss.min-saude.pt",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.ricardinis.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "www.transparencia.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "www.ilc.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "www.clubedejornalistas.pt",
+                "version": "4.1.1"
+            },
+            {
+                "url": "www.novamente.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "casamericalatina.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "dendro.fe.up.pt",
+                "version": "-1"
+            },
+            {
+                "url": "asf-asae.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "dinamiacet.iscte-iul.pt",
+                "version": "3.2.1"
+            },
+            {
+                "url": "nutradvance.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "reitor.up.pt",
+                "version": "-1"
+            },
+            {
+                "url": "s3.observador.pt",
+                "version": "-1"
+            },
+            {
+                "url": "www.lisbonmeeting.org.pt",
+                "version": "3.1.2"
+            },
+            {
+                "url": "welcome.isr.tecnico.ulisboa.pt",
+                "version": "4.4.2"
+            },
+            {
+                "url": "cip.org.pt",
+                "version": "4.6"
+            },
+            {
+                "url": "martinspisco.hslouis.pt",
+                "version": "-1"
+            },
+            {
+                "url": "grow.tecnico.ulisboa.pt",
+                "version": "-1"
+            },
+            {
+                "url": "www.escolademar.pt",
+                "version": "3.9"
+            },
+            {
+                "url": "vislab.isr.ist.utl.pt",
+                "version": "3.5.1"
+            },
+            {
+                "url": "www.ppa.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "fpr.pt",
+                "version": "4.5.9"
+            },
+            {
+                "url": "ozonoterapia.ozotec.pt",
+                "version": "-1"
+            },
+            {
+                "url": "steerin.pt",
+                "version": "-1"
+            },
+            {
+                "url": "mooshak2.dcc.fc.up.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "pascal.iseg.utl.pt",
+                "version": "-1"
+            },
+            {
+                "url": "apes.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "www.fc.up.pt",
+                "version": "-1"
+            },
+            {
+                "url": "jri.grandes.pt",
+                "version": "4.4.2"
+            },
+            {
+                "url": "www.ac-conta.pt",
+                "version": "-1"
+            },
+            {
+                "url": "jri.grandes.pt",
+                "version": "4.4.2"
+            },
+            {
+                "url": "www.tm2a.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "softprint.pt",
+                "version": "4.3"
+            },
+            {
+                "url": "www.motordigital.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "www.esgra.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "www.arsalgarve.min-saude.pt",
+                "version": "4.6.6"
+            },
+            {
+                "url": "web.ipca.pt",
+                "version": "-1"
+            },
+            {
+                "url": "actaportuguesadenutricao.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "nutrimento.pt",
+                "version": "-1"
+            },
+            {
+                "url": "www.spma.pt",
+                "version": "-1"
+            },
+            {
+                "url": "fundacaoaip.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "nocs.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "www.spoftalmologia.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "comunicacaoecultura.com.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "www.spoftalmologia.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "www.ihmt.unl.pt",
+                "version": "-1"
+            },
+            {
+                "url": "www.ulscb.min-saude.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "www.spanestesiologia.pt",
+                "version": "4.6.6"
+            },
+            {
+                "url": "www.portugalexportador.pt",
+                "version": "4.7"
+            },
+            {
+                "url": "www.labor.uevora.pt",
+                "version": "4.7"
+            }
+        ],
+        "se": [
+            {
+                "url": "expo.se",
+                "version": "-1"
+            },
+            {
+                "url": "taxi97.se",
+                "version": "-1"
+            },
+            {
+                "url": "www.butiksforum.se",
+                "version": "-1"
+            },
+            {
+                "url": "www.schlingmann.se",
+                "version": "-1"
+            }
+        ],
+        "uk": [
+            {
+                "url": "bmore.co.uk",
+                "version": "4.7"
+            },
+            {
+                "url": "www.middleearthfestival.co.uk",
+                "version": "4.5.9"
+            },
+            {
+                "url": "www.quickcrepesbury.co.uk",
+                "version": "4.7"
+            },
+            {
+                "url": "www.caistorlakes.co.uk",
+                "version": "4.4.10"
+            },
+            {
+                "url": "www.pwfit.co.uk",
+                "version": "4.4.8"
+            },
+            {
+                "url": "www.additive-manufacture.co.uk",
+                "version": "-1"
+            },
+            {
+                "url": "supert.co.uk",
+                "version": "-1"
+            }
+        ]
+    }
 }
