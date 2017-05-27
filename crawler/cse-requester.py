@@ -26,7 +26,7 @@ data = {'urls': {}}
 
 for site in sites:
     url = 'https://www.googleapis.com/customsearch/v1?key=' + apikey + '&cx=' + cx + '&q=' + query + site
-    data['urls'][site] = []
+    urls_site = []
 
     index = 1
     while index != -1:
@@ -38,14 +38,16 @@ for site in sites:
                 domain = item['displayLink']
                 version = get_version(domain)
                 print('Adding ' + domain + ' / ' + version)
-                data['urls'][site].append({'url': domain, 'version': version})
+                urls_site.append({'url': domain, 'version': version})
         except:
             pass
-
         try:
             index = resp['queries']['nextPage'][0]['startIndex']
         except:
             index = -1
+
+    if urls_site:
+        data['urls'][site] = urls_site
 
 with open("..\data\data.json", "w") as outfile:
     json.dump(data, outfile, indent=4)
