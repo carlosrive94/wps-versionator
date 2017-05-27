@@ -57,7 +57,8 @@ df_json_dedup$version[which(df_json_dedup$version==-1)]<-NA
 
 # Sumamos Numero de URLs de cada version
 TotalVersionesURLPaises <- count(df_json_dedup, pais, NumVersion = version)
-is.data.frame(TotalVersionesURLPaises)
+#is.data.frame(TotalVersionesURLPaises)
+TotalVersionesURLPaises$pais <- TotalVersionesURLPaises$pais %>% toupper
 
 ###
 # TotalVersionesURLPaises - Contiene la tabla de (pais, NumVersion, n)
@@ -172,9 +173,14 @@ ResulPaisesAño <- summarise(group_by(TotalVersionesURLVulnsPaises,pais,AñoPubV
 ResulPaisesAño <- ResulPaisesAño[order(-ResulPaisesAño$TotalVulnsPais),] 
 # **********************
 
+# ***************************************************
+# Tratamos los datos agrupando por Pais y año riesgo calculando mayor riesgo si version mas antigua
+# ***************************************************
+ResulPaisesRiesgoAño <- mutate(ResulPaisesAño,Riesgo=(2017-AñoPubVersion)*TotalVulnsPais)
 
-
-
+ResulPaisesRiesgoTotal <- summarise(group_by(ResulPaisesRiesgoAño,pais), TotalRiesgo=sum(Riesgo))
+ResulPaisesRiesgoTotal <- ResulPaisesRiesgoTotal[order(-ResulPaisesRiesgoTotal$TotalRiesgo),]
+#ResulPaisesRiesgoTotal$pais <- ResulPaisesRiesgoTotal$pais %>% toupper
 
 ##########
 # GRAFICAS
@@ -186,33 +192,68 @@ library(ggplot2)
 
 # --------------
 # Tarta de Total de Versiones de Todos los paises
-
+# --------------
 #png(filename = "Tarta_Versiones_Global.png") 
 
-Pie <- gvisPieChart(ResulVulnsMundo,options=list(width="2000px", height="1000px"))
+Pie <- gvisPieChart(ResulVulnsMundo,options=list(width="1500px", height="1000px"))
 plot(Pie)
 
 #dev.off()
 
+
 # --------------
 # Grafica de Barras ordenado por Paises con mas Vulns
+# --------------
+
+#png(filename = "Barras_Paises_Mas_Vulnerables.png")
+
 Column <- gvisColumnChart(ResulPaises)
 plot(Column)
+
+#dev.off()
+
 # --------------
 # Tabla ordenada por Paises con mas Vulns
+# --------------
 PopTable <- gvisTable(ResulPaises,
                       options=list(page='enable',height='automatic',width='automatic'))
 plot(PopTable)
+
+
+# --------------
+# Top 8 paises mas riesgo
+# --------------
+
+#png(filename = "Velocimetro_Top_Paises_Mas_Riesgo.png") 
+Top <- 8
+Gauge <-  gvisGauge(head(ResulPaisesRiesgoTotal,n=Top), 
+                    options=list(min=0, max=1500, greenFrom=0,
+                                 greenTo=300, yellowFrom=300, yellowTo=1000,
+                                 redFrom=1000, redTo=150000, width=800, height=600))
+plot(Gauge)
+#dev.off()
 # --------------
 
 
 
 
 
+str(ResulPaisesRiesgoTotal)
+boxplot(TotalRiesgo ~ pais, ResulPaisesRiesgoTotal, xlab="TotalRiesgo", ylab="pais",col())
+
+
+
+
+
+
+# Pruebas
 g <- ggplot(TotalVersionesURLVulnsPaises, aes(NumVersion, VulnsVersion, color = AñoPubVersion)) 
 g + geom_point()
 
-# Pruebas
+
+
+
+
 Motion=gvisMotionChart(TotalVersionesURLVulnsPaises, 
                        idvar="NumVersion", 
                        timevar="pais")
