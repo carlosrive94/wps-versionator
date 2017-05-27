@@ -147,10 +147,11 @@ TotalVersionesURLVulnsPaises<-merge(TotalVersionesURLPaises_sinna, TotalVulnsVer
 TotalVersionesURLVulnsPaises <- unique(TotalVersionesURLVulnsPaises)
 df_temporal <- tidyr::separate(TotalVersionesURLVulnsPaises, ReleaseVersion, c("YearReleaseVersion","MonthReleaseVersion","DayReleaseVersion"), sep = "-")
 
-TotalVersionesURLVulnsPaises <- cbind(TotalVersionesURLVulnsPaises,AñoPubVersion=df_temporal$YearReleaseVersion)
-str(TotalVersionesURLVulnsPaises)
-TotalVersionesURLVulnsPaises$AñoPubVersion <- as.numeric(TotalVersionesURLVulnsPaises$AñoPubVersion)
-str(TotalVersionesURLVulnsPaises)
+TotalVersionesURLVulnsPaises <- cbind(TotalVersionesURLVulnsPaises,AñoPubVersion=as.numeric(df_temporal$YearReleaseVersion))
+#str(TotalVersionesURLVulnsPaises)
+#TotalVersionesURLVulnsPaises$AñoPubVersion <- as.numeric(TotalVersionesURLVulnsPaises$AñoPubVersion)
+#str(TotalVersionesURLVulnsPaises)
+
 # *****************************************
 # Tratamos los datos agrupando por Version
 
@@ -180,7 +181,7 @@ ResulPaisesRiesgoAño <- mutate(ResulPaisesAño,Riesgo=(2017-AñoPubVersion)*Tot
 
 ResulPaisesRiesgoTotal <- summarise(group_by(ResulPaisesRiesgoAño,pais), TotalRiesgo=sum(Riesgo))
 ResulPaisesRiesgoTotal <- ResulPaisesRiesgoTotal[order(-ResulPaisesRiesgoTotal$TotalRiesgo),]
-#ResulPaisesRiesgoTotal$pais <- ResulPaisesRiesgoTotal$pais %>% toupper
+
 
 ##########
 # GRAFICAS
@@ -225,40 +226,32 @@ plot(PopTable)
 # --------------
 
 #png(filename = "Velocimetro_Top_Paises_Mas_Riesgo.png") 
+Media_Riesgo <- as.integer(mean(ResulPaisesRiesgoTotal$TotalRiesgo))
+Max_Riesgo <- max(ResulPaisesRiesgoTotal$TotalRiesgo)
+Naranja <- ((Max_Riesgo - Media_Riesgo)/2)+ Media_Riesgo
 Top <- 8
 Gauge <-  gvisGauge(head(ResulPaisesRiesgoTotal,n=Top), 
-                    options=list(min=0, max=1500, greenFrom=0,
-                                 greenTo=300, yellowFrom=300, yellowTo=1000,
-                                 redFrom=1000, redTo=150000, width=800, height=600))
+                    options=list(min=0, max=Max_Riesgo, greenFrom=0,
+                                 greenTo=Media_Riesgo, yellowFrom=Media_Riesgo, yellowTo=Naranja,
+                                 redFrom=Naranja, redTo=Max_Riesgo, width=800, height=600))
 plot(Gauge)
 #dev.off()
 # --------------
 
 
 
+# --------------
+# Mapa de Riesgo
+# --------------
+
+MapaRiesgo <- gvisGeoChart(ResulPaisesRiesgoTotal, locationvar = "pais", colorvar = "TotalRiesgo", options=list(width="1200px", height="800px", region='150', colorAxis="{colors:['yellow', 'red']}",backgroundColor="lightblue"))
+plot(MapaRiesgo)
 
 
-str(ResulPaisesRiesgoTotal)
-boxplot(TotalRiesgo ~ pais, ResulPaisesRiesgoTotal, xlab="TotalRiesgo", ylab="pais",col())
+# ----FIN-----
 
 
-
-
-
-
-# Pruebas
-g <- ggplot(TotalVersionesURLVulnsPaises, aes(NumVersion, VulnsVersion, color = AñoPubVersion)) 
-g + geom_point()
-
-
-
-
-
-Motion=gvisMotionChart(TotalVersionesURLVulnsPaises, 
-                       idvar="NumVersion", 
-                       timevar="pais")
-plot(Motion)
-
+# PRUEBAS GRAFICAS
 
 qplot(x = pais, data = ResulPaisesAño, geom = "TotalVulnsPais", color = AñoPubVersion)
 
@@ -271,13 +264,6 @@ qplot(x = AñoPubVersion, data = TotalVersionesURLVulnsPaises, fill = NumVersion
 
 
 
-
-
-#Primeras exploraciones graficas
-#hist(TotalVersionesURLVulnsPaises, col = "green", breaks = 50)
-
-#barplot(table(TotalVersiones$be), col="wheat", main = "Observaciones por Pais BE")
-#pie(table(TotalVersiones$be))
 
 Bubble <- gvisBubbleChart(TotalVersionesURLVulnsPaises, idvar="NumVersion", 
                           xvar="n", yvar="VulnsVersion",
