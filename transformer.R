@@ -198,7 +198,7 @@ library(ggplot2)
 # --------------
 #png(filename = "Tarta_Versiones_Global.png") 
 
-Pie <- gvisPieChart(ResulVulnsMundo,options=list(width="1500px", height="1000px"))
+Pie <- gvisPieChart(ResulVersionesMundo,options=list(width="1500px", height="1000px"))
 plot(Pie)
 
 #dev.off()
