@@ -374,7 +374,7 @@ Ahora con los dataframes preparados con los resultados calculados, podemos sacar
 **Tarta con el total de versiones encontradas en la muestra, ordenada por mayor aparición**
 
 ```{r Tarta_Paises, echo = TRUE, results='asis', tidy=FALSE}
-Pie <- gvisPieChart(ResulVersionesMundo,options=list(width="800px", height="600px"))
+Pie <- gvisPieChart(ResulVersionesMundo,options=list(width="1000px", height="800px"))
 plot(Pie)
 ```
 
@@ -405,8 +405,8 @@ plot(Gauge)
 **Mapa de Paises con su Riesgo**
 
 
-```{r Mapa_Vulns_Paises, out.width = "800px", echo = TRUE, results='asis', tidy=FALSE}
-MapaRiesgo <- gvisGeoChart(ResulPaisesRiesgoTotal, locationvar = "pais", colorvar = "TotalRiesgo", options=list(width="800px", height="600px", region='150', colorAxis="{colors:['yellow', 'red']}",backgroundColor="lightblue"))
+```{r Mapa_Vulns_Paises, echo = TRUE, results='asis', tidy=FALSE}
+MapaRiesgo <- gvisGeoChart(ResulPaisesRiesgoTotal, locationvar = "pais", colorvar = "TotalRiesgo", options=list(width="900px", height="600px", region='150', colorAxis="{colors:['yellow', 'red']}",backgroundColor="lightblue"))
 plot(MapaRiesgo)
 ```
 
