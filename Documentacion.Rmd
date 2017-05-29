@@ -93,7 +93,7 @@ Limpiamos los resultados de la muestra que como es lógico estará **dirty**.
 Quitamos las URLs repetidas, las duplicadas y eliminamos las que no hayamos podido obtener su versión. 
 
 
-```{r CargaInicial}
+```{r CargaInicial, cache=TRUE}
 # Cargando Libreria
 library(jsonlite)
 library(RCurl)
@@ -178,7 +178,9 @@ for(version in ListaVersiones){
   })
 }
 
+```
 
+```{r Tratamientodatos}
 # Creacion Tabla de Versiones con Fecha de aparicion de la version y el total de vulns que tiene
 df_resum <- data.frame()
 df_vulns1version<-as.data.frame(AllVulns[[1]])
