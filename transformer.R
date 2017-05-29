@@ -18,6 +18,8 @@ library(stats)
 library(base)
 library(dplyr)
 library(tidyr)
+library(googleVis)
+library(ggplot2)
 
 # Creando objeto json
 json_file <- fromJSON("./data/data.json", flatten = TRUE )
