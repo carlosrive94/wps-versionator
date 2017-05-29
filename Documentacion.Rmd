@@ -72,10 +72,18 @@ Para la extracción de datos, en un primer momento se implementó un crawler con
  El problema aparece cuando Google detecta que se está utilizando un crawler y solicita un Captcha muy difícil de bypassear, lo que nos deja con una cantidad de resultados muy inferior a la esperada.
 
 La alternativa al crawler es el uso del servicio de **Google Custome Search Engine (CSE)** que, con una serie de modificaciones, puede utilizarse para realizar búsquedas en toda la red. 
-Otro problema que plantea esta alternativa es la limitación de la versión gratuita de la API: Solo permite consultar **64 resultados por búsqueda**. 
-Para evitar esta limitación se realizan diferentes búsquedas similares para poder obtener más resultados. En este caso, se utiliza la siguiente consulta modificando el campo `es` por un listado de sites disponibles:
-`“index of” inurl:wp-content site:es `
-Así se obtienen 64 resultados por site y se pueden realizar comparativas entre los resultados de cada uno de ellos.
+Otro problema que plantea esta alternativa es la limitación de la versión gratuita de la API: Solo permite consultar **64 resultados por búsqueda**.   
+Para evitar esta limitación se realizan diferentes búsquedas similares para poder obtener más resultados. En este caso, se utiliza la siguiente consulta modificando el campo `es` por un listado de sites disponibles:  
+`“index of” inurl:wp-content site:es `.  
+Así se obtienen 64 resultados por site y se pueden realizar comparativas entre los resultados de cada uno de ellos.  
+  
+Se han intentado utilizar otras APIs para la búsqueda de datos, pero se han encontrado los siguientes problemas en cada una de ellas:
+
+ - **Google Web Search API**: Deprecated. 
+ - **Yahoo Boss**: Discontinued.
+ - **Bing Web Search API**: De pago.
+ - **Faroo**: Requisitos no cumplidos para obtener una API key.
+
 
 
 ### Procesado con R
