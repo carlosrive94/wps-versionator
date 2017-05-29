@@ -45,7 +45,7 @@ Dentro del ranking mundial, *WordPress* es usado por el 28% de páginas web de t
 
 #  Objetivo de la práctica
 
-Entre los objetivos de las actualizaciones tanto de la propia plataforma *WordPress* como de sus plugins y temas, está mla de solucionas las vulnerabilidades que se van descubriendo y publicando en cada una de sus versiones.
+Entre los objetivos de las actualizaciones tanto de la propia plataforma *WordPress* como de sus plugins y temas, está la de solucionas a las vulnerabilidades que se van descubriendo y publicando en cada una de sus versiones.
 El objetivo de nuestro estudio es el de conocer en qué versión se encuentra cada página web de la muestra para poder identificar a cuantas vulnerabilidades está expuesta.
 Realizando el análisis de datos globalmente, podemos posicionar cada país segun el estado de actualización de sus páginas *WordPress* asignando un nivel de Riesgo para cada país.
 
@@ -63,57 +63,19 @@ Todo ello se realiza a través de un lenguaje con enfoque estadístico llamado R
 
 ### Extracción de datos
 
-Para poder conseguir la muestra hacemos una búsqueda a Google.
+Para la extracción de datos, en un primer momento se implementó un crawler con el módulo de Python: **scrapy**. Esta araña web realizaba los siguientes pasos:
 
-* aqui explicar un poco como se ha hecho Carlos
-* los poblemas que hemos tenido del limite
-* alternativas probadas Bing,etc
-* soluciones encontradas (por site) y dificultades
+ - Buscar en Google la siguiente consulta: `"index of” inurl:wp-content `. Esta búsqueda devuelve un listado de página que utilizan Wordpress.
+ - Acceder resultado a resultado a la ruta `/readme.html`. En este fichero, aparece la versión de Wordpress si no ha sido modificado.
+ - En el caso de mantener el readme por defecto, se realiza un parseo del html a través de **BeautifulSoup** y se extrae la versión. 
+ 
+ El problema aparece cuando Google detecta que se está utilizando un crawler y solicita un Captcha muy difícil de bypassear, lo que nos deja con una cantidad de resultados muy inferior a la esperada.
 
-```
-import re
-import json
-from bs4 import BeautifulSoup
-from scrapy.spiders import Spider
-from scrapy.selector import Selector
-from urllib.request import urlopen
-from urllib.parse import urlparse
-
-
-class WPSpider(Spider):
-    name = 'wpspider'
-    allowed_domains = ['www.google.com']
-    start_urls = ['https://www.google.es/search?q=%E2%80%9Cindex+of%E2%80%9D+inurl:wp-content&start=' + str(i * 10) for
-                  i in range(20)]
-
-    def parse(self, response):
-        sel = Selector(response)
-        urls = sel.xpath('//h3/a/@href').extract()
-        urls = [re.search('q=(.*)&sa', n).group(1) for n in urls]
-
-        data = []
-        for url in urls:
-            parsed_uri = urlparse(url)
-            domain = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
-            version = get_version(domain)
-            print('****Domain:' + domain)
-            data.append({'url': domain, 'version': version})
-
-        with open("..\data\data.json", "w") as outfile:
-            json.dump({'urls': data}, outfile, indent=4)
-
-
-def get_version(domain):
-    readme = domain + 'readme.html'
-    try:
-        f = urlopen(readme)
-        soup = BeautifulSoup(f.read(), 'html.parser')
-        version = soup.find('h1', {'id': 'logo'}).text.split(' ')[2].rstrip()
-    except:
-        version = '-1'
-    return version
-
-```
+La alternativa al crawler es el uso del servicio de **Google Custome Search Engine (CSE)** que, con una serie de modificaciones, puede utilizarse para realizar búsquedas en toda la red. 
+Otro problema que plantea esta alternativa es la limitación de la versión gratuita de la API: Solo permite consultar **64 resultados por búsqueda**. 
+Para evitar esta limitación se realizan diferentes búsquedas similares para poder obtener más resultados. En este caso, se utiliza la siguiente consulta modificando el campo `es` por un listado de sites disponibles:
+`“index of” inurl:wp-content site:es `
+Así se obtienen 64 resultados por site y se pueden realizar comparativas entre los resultados de cada uno de ellos.
 
 
 ### Procesado con R
