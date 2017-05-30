@@ -93,18 +93,38 @@ Limpiamos los resultados de la muestra que como es lógico estará **dirty**.
 Quitamos las URLs repetidas, las duplicadas y eliminamos las que no hayamos podido obtener su versión. 
 
 
-```{r CargaInicial, cache=TRUE}
+```{r Librerias, echo=FALSE}
 # Cargando Libreria
-library(jsonlite)
-library(RCurl)
-library(bitops)
-library(stats)
-library(base)
-library(dplyr)
-library(tidyr)
-library(googleVis)
-library(ggplot2)
+if (!suppressMessages(suppressWarnings(require("jsonlite", quietly = T)))) {
+  suppressMessages(suppressWarnings(install.packages("jsonlite", repos = "http://cran.rstudio.com/", quiet = T, dependencies = T)))
+}
+if (!suppressMessages(suppressWarnings(require("RCurl", quietly = T)))) {
+  suppressMessages(suppressWarnings(install.packages("RCurl", repos = "http://cran.rstudio.com/", quiet = T, dependencies = T)))
+}
+if (!suppressMessages(suppressWarnings(require("bitops", quietly = T)))) {
+  suppressMessages(suppressWarnings(install.packages("bitops", repos = "http://cran.rstudio.com/", quiet = T, dependencies = T)))
+}
+if (!suppressMessages(suppressWarnings(require("stats", quietly = T)))) {
+  suppressMessages(suppressWarnings(install.packages("stats", repos = "http://cran.rstudio.com/", quiet = T, dependencies = T)))
+}
+if (!suppressMessages(suppressWarnings(require("base", quietly = T)))) {
+  suppressMessages(suppressWarnings(install.packages("base", repos = "http://cran.rstudio.com/", quiet = T, dependencies = T)))
+}
+if (!suppressMessages(suppressWarnings(require("dplyr", quietly = T)))) {
+  suppressMessages(suppressWarnings(install.packages("dplyr", repos = "http://cran.rstudio.com/", quiet = T, dependencies = T)))
+}
+if (!suppressMessages(suppressWarnings(require("tidyr", quietly = T)))) {
+  suppressMessages(suppressWarnings(install.packages("tidyr", repos = "http://cran.rstudio.com/", quiet = T, dependencies = T)))
+}
+if (!suppressMessages(suppressWarnings(require("googleVis", quietly = T)))) {
+  suppressMessages(suppressWarnings(install.packages("googleVis", repos = "http://cran.rstudio.com/", quiet = T, dependencies = T)))
+}
+if (!suppressMessages(suppressWarnings(require("ggplot2", quietly = T)))) {
+  suppressMessages(suppressWarnings(install.packages("ggplot2", repos = "http://cran.rstudio.com/", quiet = T, dependencies = T)))
+}
+```
 
+```{r CargaInicial, cache=FALSE}
 # Para que la salida de Plot de Google vaya al Markdown
 op <- options(gvis.plot.tag='chart')
 
@@ -249,123 +269,6 @@ ResulPaisesRiesgoTotal <- summarise(group_by(ResulPaisesRiesgoAño,pais), TotalR
 ResulPaisesRiesgoTotal <- ResulPaisesRiesgoTotal[order(-ResulPaisesRiesgoTotal$TotalRiesgo),]
 
 
-```
-
-Hacemos el recuento de resultados y lo llevamos a un dataframe
-
-```
-# Sumamos Numero de URLs de cada version
-TotalVersionesURLPaises <- count(df_json_dedup, pais, NumVersion = version)
-#is.data.frame(TotalVersionesURLPaises)
-TotalVersionesURLPaises$pais <- TotalVersionesURLPaises$pais %>% toupper
-
-###
-# TotalVersionesURLPaises - Contiene la tabla de (pais, NumVersion, n)
-###
-
-TotalVersionesURLPaises_sinna <- TotalVersionesURLPaises[complete.cases(TotalVersionesURLPaises),]
-
-###
-# TotalVersionesURLPaises_sinna - Contiene la tabla de (pais, NumVersion, n) todas las URLs con version
-###
-```
-
-Ahora podemos sacar las versiones que han aparecido en la muestra y extraer los datos de Vulnerabilidades
-
-```
-# *****************************
-# * Carga de vulnerabilidades *
-# *****************************
-
-# Encontrar Lista de Versiones encontradas de URLs de paises para sacar vulns de cada version 
-ListaVersiones <- TotalVersionesURLPaises$NumVersion
-ListaVersiones <- as.character(ListaVersiones[!is.na(ListaVersiones)])
-ListaVersiones = sub("([[:punct:]])","",ListaVersiones)
-ListaVersiones = sub("([[:punct:]])","",ListaVersiones)
-ListaVersiones <- unique(ListaVersiones)
-
-AllVulns <- list()
-#ListaVersiones <- c('47','46','4410','4018','301','31','341','352','3919','41')
-for(version in ListaVersiones){
-  res <- getURL(url = paste("https://wpvulndb.com/api/v2/wordpresses/", version, sep=""))
-  AllVulns <- tryCatch({
-    append(AllVulns, fromJSON(res))
-  }, error = function(err) {
-    print(paste("ERROR in version", i,":",err))
-  })
-}
-
-# Creacion Tabla de Versiones con Fecha de aparicion de la version y el total de vulns que tiene
-df_resum <- data.frame()
-df_vulns1version<-as.data.frame(AllVulns[[1]])
-df_total <- cbind(ReleaseVersion=as.character.Date(df_vulns1version$release_date[1]),VulnsVersion=length(df_vulns1version$release_date))
-df_total <- cbind(df_total,NumVersion=names(AllVulns[1]))
-for(i in 2:length(ListaVersiones)) {
-  df_vulns1version<-as.data.frame(AllVulns[[i]])
-  df_resum <- cbind(ReleaseVersion=as.character.Date(df_vulns1version$release_date[1]),VulnsVersion=length(df_vulns1version$release_date),NumVersion=names(AllVulns[i]))
-  df_total<-rbind(df_total,df_resum)
-}
-
-TotalVulnsVersion<-as.data.frame(df_total)
-TotalVulnsVersion <- unique(TotalVulnsVersion)
-# Valores que son Factors los cambiamos para poder tratar y ordenar
-TotalVulnsVersion$VulnsVersion <- as.numeric(as.character(TotalVulnsVersion$VulnsVersion))
-TotalVulnsVersion$NumVersion <- as.character(TotalVulnsVersion$NumVersion)
-
-###
-# TotalVulnsVersion - Contiene la tabla de (ReleaseVersion, VulnsVersion, NumVersion)
-###
-```
-
-Ahora ya podemos sacar las Tablas finales de resultados
-
-```
-#####################
-#TABLAS DE RESULTADOS
-#####################
-
-print(TotalVersionesURLPaises_sinna)
-print(TotalVulnsVersion)
-
-#Tabla con todos los Datos acumulados
-
-TotalVersionesURLVulnsPaises<-merge(TotalVersionesURLPaises_sinna, TotalVulnsVersion, by = "NumVersion")
-TotalVersionesURLVulnsPaises <- unique(TotalVersionesURLVulnsPaises)
-df_temporal <- tidyr::separate(TotalVersionesURLVulnsPaises, ReleaseVersion, c("YearReleaseVersion","MonthReleaseVersion","DayReleaseVersion"), sep = "-")
-
-TotalVersionesURLVulnsPaises <- cbind(TotalVersionesURLVulnsPaises,AñoPubVersion=as.numeric(df_temporal$YearReleaseVersion))
-#str(TotalVersionesURLVulnsPaises)
-#TotalVersionesURLVulnsPaises$AñoPubVersion <- as.numeric(TotalVersionesURLVulnsPaises$AñoPubVersion)
-#str(TotalVersionesURLVulnsPaises)
-
-# *****************************************
-# Tratamos los datos agrupando por Version
-# *****************************************
-ResulVersionesMundo <- summarise(group_by(TotalVersionesURLVulnsPaises,NumVersion), TotalVerMundo = sum(VulnsVersion))
-ResulVersionesMundo <- ResulVersionesMundo[order(-ResulVersionesMundo$TotalVerMundo),] 
-# *****************************************
-
-# **************************************
-# Tratamos los datos agrupando por Pais
-# **************************************
-ResulPaises <- summarise(group_by(TotalVersionesURLVulnsPaises,pais), TotalVulnsPais = sum(VulnsVersion))
-ResulPaises <- ResulPaises[order(-ResulPaises$TotalVulnsPais),] 
-# **************************************
-
-# ***************************************************
-# Tratamos los datos agrupando por Pais y año version
-# ***************************************************
-ResulPaisesAño <- summarise(group_by(TotalVersionesURLVulnsPaises,pais,AñoPubVersion), TotalVulnsPais = sum(VulnsVersion))
-ResulPaisesAño <- ResulPaisesAño[order(-ResulPaisesAño$TotalVulnsPais),] 
-# ***************************************************
-
-# *************************************************************************************************
-# Tratamos los datos agrupando por Pais y año riesgo calculando mayor riesgo si version mas antigua
-# *************************************************************************************************
-ResulPaisesRiesgoAño <- mutate(ResulPaisesAño,Riesgo=(2017-AñoPubVersion)*TotalVulnsPais)
-
-ResulPaisesRiesgoTotal <- summarise(group_by(ResulPaisesRiesgoAño,pais), TotalRiesgo=sum(Riesgo))
-ResulPaisesRiesgoTotal <- ResulPaisesRiesgoTotal[order(-ResulPaisesRiesgoTotal$TotalRiesgo),]
 ```
 
 ### Graficas de resultados
