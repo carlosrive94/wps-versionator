@@ -17,22 +17,6 @@ knitr::opts_chunk$set(echo = FALSE)
 knitr::opts_chunk$set(fig.align = 'center')
 ```
 
-```{r bootstrap, message=FALSE, warning=FALSE, include=FALSE}
-if (!suppressMessages(suppressWarnings(require("plyr", quietly = T)))) {
-  suppressMessages(suppressWarnings(install.packages("plyr", repos = "http://cran.rstudio.com/", quiet = T, dependencies = T)))
-}
-if (!suppressMessages(suppressWarnings(require("dplyr", quietly = T)))) {  
-  suppressMessages(suppressWarnings(install.packages("dplyr", repos = "http://cran.rstudio.com/", quiet = T, dependencies = T)))
-}
-if (!suppressMessages(suppressWarnings(require("ggplot2", quietly = T)))) {
-suppressMessages(suppressWarnings(install.packages("ggplot2", repos = "http://cran.rstudio.com/", quiet = T, dependencies = T)))
-}
-```
-
-``` {r themes, echo=FALSE, eval=FALSE}
-themes <- "default", "cerulean", "journal", "flatly", "readable", "spacelab", "united", "cosmo", "lumen", "paper", "sandstone", "simplex", "yeti"
-```
-
 # Introduccion 
 
 *WordPress* es el Sistema Gestor de Contenidos (CMS - Content Management System), más usado en Internet. Empezó como una plataforma para la publicación de Blogs pero gracias a un buen soporte y contínuas actualizaciones que mejoran  funcionalidades, usabilidad y seguridad, se ha extendido su uso para la creación de páginas web en general.
@@ -95,6 +79,8 @@ Quitamos las URLs repetidas, las duplicadas y eliminamos las que no hayamos podi
 
 ```{r Librerias, echo=FALSE}
 # Cargando Libreria
+library(wpsversionator)
+
 if (!suppressMessages(suppressWarnings(require("jsonlite", quietly = T)))) {
   suppressMessages(suppressWarnings(install.packages("jsonlite", repos = "http://cran.rstudio.com/", quiet = T, dependencies = T)))
 }
@@ -126,149 +112,18 @@ if (!suppressMessages(suppressWarnings(require("ggplot2", quietly = T)))) {
 
 ```{r CargaInicial, cache=FALSE}
 # Para que la salida de Plot de Google vaya al Markdown
-op <- options(gvis.plot.tag='chart')
-
-# Creando objeto json
-json_file <- fromJSON("./data/data.json", flatten = TRUE )
-
-
-# Creando un Dataframe que contiene todas las URLs de todos los paises
-# con campo pais
-df_json <-data.frame(do.call("cbind",json_file$urls[[1]]))
-df_json_paises <-cbind(df_json,pais=names(json_file$urls[1]))
-
-for(i in 2:length(json_file$urls)) {
-
-  df_json <-data.frame(do.call("cbind",json_file$urls[[i]]))
-  df_json_pais <-cbind(df_json,pais=names(json_file$urls[i]))
-  df_json_paises <- rbind(df_json_paises,df_json_pais)
-}   
-    
-
-
-# Eliminamos las duplicadas que llamaremos Deduplicado
-df_json_dedup <- unique(df_json_paises)
-
-
-# Cambiamos las versiones -1 por NA
-df_json_dedup$version[which(df_json_dedup$version==-1)]<-NA
-
-
-# Sumamos Numero de URLs de cada version
-TotalVersionesURLPaises <- count(df_json_dedup, pais, NumVersion = version)
-#is.data.frame(TotalVersionesURLPaises)
-TotalVersionesURLPaises$pais <- TotalVersionesURLPaises$pais %>% toupper
-
-###
-# TotalVersionesURLPaises - Contiene la tabla de (pais, NumVersion, n)
-###
-
-TotalVersionesURLPaises_sinna <- TotalVersionesURLPaises[complete.cases(TotalVersionesURLPaises),]
-
-###
-# TotalVersionesURLPaises_sinna - Contiene la tabla de (pais, NumVersion, n) todas las URLs con version
-###
-
-# ***************************************************************************
-
-
-
-# ***************************************************************************
-
-# *****************************
-# * Carga de vulnerabilidades *
-# *****************************
-
-
-# Encontrar Lista de Versiones encontradas de URLs de paises para sacar vulns de cada version 
-ListaVersiones <- TotalVersionesURLPaises$NumVersion
-ListaVersiones <- as.character(ListaVersiones[!is.na(ListaVersiones)])
-ListaVersiones = sub("([[:punct:]])","",ListaVersiones)
-ListaVersiones = sub("([[:punct:]])","",ListaVersiones)
-ListaVersiones <- unique(ListaVersiones)
-
-
-AllVulns <- list()
-for(version in ListaVersiones){
-  res <- getURL(url = paste("https://wpvulndb.com/api/v2/wordpresses/", version, sep=""))
-  AllVulns <- tryCatch({
-    append(AllVulns, fromJSON(res))
-  }, error = function(err) {
-    print(paste("ERROR in version", i,":",err))
-  })
-}
+TotalVersionesURLPaises <- wpsversionator::cargaUrls("./data/data.json")
 
 ```
 
+```{r cargaVulnerabilidades}
+versiones <- wpsversionator::listarVersiones(TotalVersionesURLPaises)
+AllVulns <- wpsversionator::cargaVulnerabilidades(versiones)
+TotalVulnsVersion <- wpsversionator::totalVulnerabilidades(AllVulns, versiones)
+```
+
 ```{r Tratamientodatos}
-# Creacion Tabla de Versiones con Fecha de aparicion de la version y el total de vulns que tiene
-df_resum <- data.frame()
-df_vulns1version<-as.data.frame(AllVulns[[1]])
-df_total <- cbind(ReleaseVersion=as.character.Date(df_vulns1version$release_date[1]),VulnsVersion=length(df_vulns1version$release_date))
-df_total <- cbind(df_total,NumVersion=names(AllVulns[1]))
-for(i in 2:length(ListaVersiones)) {
-  df_vulns1version<-as.data.frame(AllVulns[[i]])
-  df_resum <- cbind(ReleaseVersion=as.character.Date(df_vulns1version$release_date[1]),VulnsVersion=length(df_vulns1version$release_date),NumVersion=names(AllVulns[i]))
-  df_total<-rbind(df_total,df_resum)
-}
-
-TotalVulnsVersion<-as.data.frame(df_total)
-TotalVulnsVersion <- unique(TotalVulnsVersion)
-# Valores que son Factors los cambiamos para poder tratar y ordenar
-TotalVulnsVersion$VulnsVersion <- as.numeric(as.character(TotalVulnsVersion$VulnsVersion))
-TotalVulnsVersion$NumVersion <- as.character(TotalVulnsVersion$NumVersion)
-
-###
-# TotalVulnsVersion - Contiene la tabla de (ReleaseVersion, VulnsVersion, NumVersion)
-###
-
-# ***************************************************************************
-
-
-#####################
-#TABLAS DE RESULTADOS
-#####################
-
-#Tabla con todos los Datos acumulados
-
-TotalVersionesURLVulnsPaises<-merge(TotalVersionesURLPaises_sinna, TotalVulnsVersion, by = "NumVersion")
-TotalVersionesURLVulnsPaises <- unique(TotalVersionesURLVulnsPaises)
-df_temporal <- tidyr::separate(TotalVersionesURLVulnsPaises, ReleaseVersion, c("YearReleaseVersion","MonthReleaseVersion","DayReleaseVersion"), sep = "-")
-
-TotalVersionesURLVulnsPaises <- cbind(TotalVersionesURLVulnsPaises,AñoPubVersion=as.numeric(df_temporal$YearReleaseVersion))
-
-
-# *****************************************
-# Tratamos los datos agrupando por Version
-
-ResulVersionesMundo <- summarise(group_by(TotalVersionesURLVulnsPaises,NumVersion), TotalVerMundo = sum(VulnsVersion))
-ResulVersionesMundo <- ResulVersionesMundo[order(-ResulVersionesMundo$TotalVerMundo),] 
-# *****************************************
-
-
-
-# **************************************
-# Tratamos los datos agrupando por Pais
-# **************************************
-ResulPaises <- summarise(group_by(TotalVersionesURLVulnsPaises,pais), TotalVulnsPais = sum(VulnsVersion))
-ResulPaises <- ResulPaises[order(-ResulPaises$TotalVulnsPais),] 
-
-# ***************************************************
-# Tratamos los datos agrupando por Pais y año version
-# ***************************************************
-ResulPaisesAño <- summarise(group_by(TotalVersionesURLVulnsPaises,pais,AñoPubVersion), TotalVulnsPais = sum(VulnsVersion))
-ResulPaisesAño <- ResulPaisesAño[order(-ResulPaisesAño$TotalVulnsPais),] 
-# **********************
-
-# ***************************************************
-# Tratamos los datos agrupando por Pais y año riesgo calculando mayor riesgo si version mas antigua
-# ***************************************************
-ResulPaisesRiesgoAño <- mutate(ResulPaisesAño,Riesgo=(2017-AñoPubVersion)*TotalVulnsPais)
-
-ResulPaisesRiesgoTotal <- summarise(group_by(ResulPaisesRiesgoAño,pais), TotalRiesgo=sum(Riesgo))
-ResulPaisesRiesgoTotal <- ResulPaisesRiesgoTotal[order(-ResulPaisesRiesgoTotal$TotalRiesgo),]
-
-
+TotalVersionesURLVulnsPaises <- wpsversionator::GeneraTotalDF(TotalVersionesURLPaises)
 ```
 
 ### Graficas de resultados
@@ -279,16 +134,14 @@ Ahora con los dataframes preparados con los resultados calculados, podemos sacar
 **Tarta con el total de versiones encontradas en la muestra, ordenada por mayor aparición**
 
 ```{r Tarta_Paises, echo = TRUE, results='asis', tidy=FALSE}
-Pie <- gvisPieChart(ResulVersionesMundo,options=list(width="1000px", height="800px"))
-plot(Pie)
+plot(wpsversionator::tarta(TotalVersionesURLVulnsPaises))
 ```
 
 
 **Grafica de barras con el total de vulnerabilidades totales en cada pais (del total de sus WordPress)**
 
 ```{r Barras_Vulns_Paises, out.width = "800px", echo = TRUE, results='asis', tidy=FALSE}
-Column <- gvisColumnChart(ResulPaises)
-plot(Column)
+plot(wpsversionator::barras(TotalVersionesURLVulnsPaises))
 ```
 
 
@@ -296,23 +149,14 @@ plot(Column)
 
 
 ```{r Grafica_Top, echo = TRUE, results='asis', tidy=FALSE}
-Media_Riesgo <- as.integer(mean(ResulPaisesRiesgoTotal$TotalRiesgo))
-Max_Riesgo <- max(ResulPaisesRiesgoTotal$TotalRiesgo)
-Naranja <- ((Max_Riesgo - Media_Riesgo)/2)+ Media_Riesgo
-Top <- 8
-Gauge <-  gvisGauge(head(ResulPaisesRiesgoTotal,n=Top), 
-                    options=list(min=0, max=Max_Riesgo, greenFrom=0,
-                                 greenTo=Media_Riesgo, yellowFrom=Media_Riesgo, yellowTo=Naranja,
-                                 redFrom=Naranja, redTo=Max_Riesgo, width=800, height=600))
-plot(Gauge)
+plot(wpsversionator::relojes(TotalVersionesURLVulnsPaises))
 ```
 
 **Mapa de Paises con su Riesgo**
 
 
 ```{r Mapa_Vulns_Paises, echo = TRUE, results='asis', tidy=FALSE}
-MapaRiesgo <- gvisGeoChart(ResulPaisesRiesgoTotal, locationvar = "pais", colorvar = "TotalRiesgo", options=list(width="900px", height="600px", region='150', colorAxis="{colors:['yellow', 'red']}",backgroundColor="lightblue"))
-plot(MapaRiesgo)
+plot(wpsversionator::mapa(TotalVersionesURLVulnsPaises))
 ```
 
 
