@@ -133,14 +133,14 @@ Ahora con los dataframes preparados con los resultados calculados, podemos sacar
 
 **Tarta con el total de versiones encontradas en la muestra, ordenada por mayor aparición**
 
-```{r Tarta_Paises, echo = TRUE, results='asis', tidy=FALSE}
+```{r Tarta_Paises, results='asis', tidy=FALSE}
 plot(wpsversionator::tarta(TotalVersionesURLVulnsPaises))
 ```
 
 
 **Grafica de barras con el total de vulnerabilidades totales en cada pais (del total de sus WordPress)**
 
-```{r Barras_Vulns_Paises, out.width = "800px", echo = TRUE, results='asis', tidy=FALSE}
+```{r Barras_Vulns_Paises, out.width = "800px", results='asis', tidy=FALSE}
 plot(wpsversionator::barras(TotalVersionesURLVulnsPaises))
 ```
 
@@ -148,14 +148,14 @@ plot(wpsversionator::barras(TotalVersionesURLVulnsPaises))
 **Top 8 de Paises con más Riesgo. Calculado según antigüedad de versiones y vulnerabilidades de cada una**
 
 
-```{r Grafica_Top, echo = TRUE, results='asis', tidy=FALSE}
+```{r Grafica_Top, results='asis', tidy=FALSE}
 plot(wpsversionator::relojes(TotalVersionesURLVulnsPaises))
 ```
 
 **Mapa de Paises con su Riesgo**
 
 
-```{r Mapa_Vulns_Paises, echo = TRUE, results='asis', tidy=FALSE}
+```{r Mapa_Vulns_Paises, results='asis', tidy=FALSE}
 plot(wpsversionator::mapa(TotalVersionesURLVulnsPaises))
 ```
 
