@@ -19,19 +19,20 @@ knitr::opts_chunk$set(fig.align = 'center')
 
 # Introduccion 
 
-*WordPress* es el Sistema Gestor de Contenidos (CMS - Content Management System), más usado en Internet. Empezó como una plataforma para la publicación de Blogs pero gracias a un buen soporte y contínuas actualizaciones que mejoran  funcionalidades, usabilidad y seguridad, se ha extendido su uso para la creación de páginas web en general.
-Además dispone del apoyo de la comunidad de desarrolladores que ponen a disposición infinidad de temas, plantillas y plugins.
+***WordPress®*** es el Sistema Gestor de Contenidos (CMS - Content Management System), más usado en Internet. Empezó como una plataforma para la publicación de Blogs pero gracias a un buen soporte y contínuas actualizaciones que mejoran  funcionalidades, usabilidad y seguridad, se ha extendido su uso para la creación de páginas web en general.
+Además dispone del apoyo de la comunidad de desarrolladores que ponen a disposición infinidad de temas, plantillas y plugins.  
 
-Dentro del ranking mundial, *WordPress* es usado por el 28% de páginas web de todo el mundo, y de todas ellas, de las que usan CMS ocupa el 59% del mercado (como referencia en segundo lugar estaria Joomla con un 7%).
+Dentro del ranking mundial, ***WordPress*** es usado por el 28% de páginas web de todo el mundo, y de todas ellas, de las que usan CMS ocupa el 59% del mercado (como referencia en segundo lugar estaria Joomla con un 7%).  
 
+Según ***WordPress***, es utilizado por cerca de 75 millones de sitios web, más de 409 millones de personas ven más de 23,6 mil millones de páginas cada mes, los usuarios producen 69,5 millones de nuevos mensajes y 46,8 millones de nuevos comentarios cada mes.  
 
 ---
 
 #  Objetivo de la práctica
 
-Entre los objetivos de las actualizaciones tanto de la propia plataforma *WordPress* como de sus plugins y temas, está la de solucionas a las vulnerabilidades que se van descubriendo y publicando en cada una de sus versiones.
-El objetivo de nuestro estudio es el de conocer en qué versión se encuentra cada página web de la muestra para poder identificar a cuantas vulnerabilidades está expuesta.
-Realizando el análisis de datos globalmente, podemos posicionar cada país segun el estado de actualización de sus páginas *WordPress* asignando un nivel de Riesgo para cada país.
+Entre los objetivos de las actualizaciones tanto de la propia plataforma ***WordPress*** como de sus plugins y temas, está la de solucionas a las vulnerabilidades que se van descubriendo y publicando en cada una de sus versiones.  
+El objetivo de nuestro estudio es el de conocer en qué versión se encuentra cada página web de la muestra para poder identificar a cuantas vulnerabilidades está expuesta.  
+Realizando el análisis de datos globalmente, podemos posicionar cada país segun el estado de actualización de sus páginas ***WordPress*** asignando un nivel de Riesgo para cada país.
 
 Todo ello se realiza a través de un lenguaje con enfoque estadístico llamado R.
 
@@ -72,10 +73,22 @@ Se han intentado utilizar otras APIs para la búsqueda de datos, pero se han enc
 
 ### Procesado con R
 
-Incorporamos el fichero en formato JSON en el script de R, para convertirlo en un dataframe.
-Limpiamos los resultados de la muestra que como es lógico estará **dirty**.
-Quitamos las URLs repetidas, las duplicadas y eliminamos las que no hayamos podido obtener su versión. 
+Incorporamos el fichero en formato JSON en el script de R, para convertirlo en un dataframe, y luego limpiamos los resultados de la muestra que como es lógico estará **dirty**.  
+También quitamos las URLs repetidas, las duplicadas y eliminamos las que no hayamos podido obtener su versión.  
+En el package generado, tenemos la función `cargaUrls` que realiza este paso y devuelve el dataframe con las URLs de cada país.
 
+Ahora necesitamos la lista de versiones que nos habran aparecido y prepararla para el siguiente paso.
+Esto significa disponer de la lista total de versiones de todos los paises y adaptarlas quitando sin signos de puntuación.  
+La función `listarVersiones` realiza este paso y devuelve el listado.
+
+En este punto y mediante una API, para cada version consultamos la página web `wpvulnsdb.com` para sacar los datos de las vulnerabilidades encontradas para cada versión, así como la fecha de publicación de la versión.  
+La función `cargaVulnerabilidades` realiza este paso y tarda unos segundos porque se conecta a la página web para extraer los datos.  
+  
+Con estos datos, se hace el tratamiento para obtener para cada versión, el número de vulnerabilidades y la fecha de publicación de la versión.
+La función `totalVulnerabilidades` realiza este paso.
+
+El ultimo paso de procesado se cruza la información obteniendo un dataframe con los paises con sus versiones con su fecha de publicación y el número de vulnerabilidades descubiertas de la versión.
+La función `GeneraTotalDF` realiza ese procesado.
 
 ```{r Librerias, echo=FALSE}
 # Cargando Libreria
@@ -128,10 +141,12 @@ TotalVersionesURLVulnsPaises <- wpsversionator::GeneraTotalDF(TotalVersionesURLP
 
 ### Graficas de resultados
 
-Ahora con los dataframes preparados con los resultados calculados, podemos sacar diferentes graficas
+Ahora con los dataframes preparados con el procesado anterior, se presentan las gráficas de resultados. Para cada una de ellas se realizan unos cálculos finales que preparan los datos para poder representar la información que se pretende mostrar.
 
 
 **Tarta con el total de versiones encontradas en la muestra, ordenada por mayor aparición**
+  
+Esta gráfica muestra en una tarta, el total de versiones encontradas entre todos los paises ordenadas de mayor a menor presencia. Con esto se pueden ver cuales son las versiones más extendidas en general, sin diferenciar su procedencia.
 
 ```{r Tarta_Paises, results='asis', tidy=FALSE}
 plot(wpsversionator::tarta(TotalVersionesURLVulnsPaises))
@@ -139,6 +154,9 @@ plot(wpsversionator::tarta(TotalVersionesURLVulnsPaises))
 
 
 **Grafica de barras con el total de vulnerabilidades totales en cada pais (del total de sus WordPress)**
+  
+Con esta gráfica de barras se agrupan todas las versiones encontradas de cada pais y , se suman el total de vulnerabilidades y se muestra el resultado por país.
+
 
 ```{r Barras_Vulns_Paises, out.width = "800px", results='asis', tidy=FALSE}
 plot(wpsversionator::barras(TotalVersionesURLVulnsPaises))
@@ -159,5 +177,14 @@ plot(wpsversionator::relojes(TotalVersionesURLVulnsPaises))
 plot(wpsversionator::mapa(TotalVersionesURLVulnsPaises))
 ```
 
-
- 
+```{r prueba}
+ print("HOLA MUNDO")
+```
+  
+---
+  
+### Conclusiones
+  
+Por falta de tiempo no hemos podido incluir más cálculos que se podrían realizar una vez ya disponemos de todos los datos procesados.
+Con las gráficas hemos intentado mostrar de una forma visual y fácil de entender, la situación del versionado de las páginas Wordpress que hemos podido extraer, así como el estado de las vulnerabilidades.
+La conclusión final dependerá de los resultados en el momento de la ejecución pero en el momento de la creación del documento, se demuestra que no hay ningún país que no tenga versiones que no estén actualizadas. Eso significa que cuanto más antigua es la versión que contiene vulnerabilidades, más riesgo hay de ser explotadas.
