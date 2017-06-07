@@ -180,10 +180,6 @@ plot(wpsversionator::relojes(TotalVersionesURLVulnsPaises))
 ```{r Mapa_Vulns_Paises, results='asis', tidy=FALSE}
 plot(wpsversionator::mapa(TotalVersionesURLVulnsPaises))
 ```
-
-```{r prueba}
- print("HOLA MUNDO")
-```
   
 ---
   
