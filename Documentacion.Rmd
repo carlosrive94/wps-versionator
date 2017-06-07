@@ -22,45 +22,49 @@ knitr::opts_chunk$set(fig.align = 'center')
 ***WordPress®*** es el Sistema Gestor de Contenidos (CMS - Content Management System), más usado en Internet. Empezó como una plataforma para la publicación de Blogs pero gracias a un buen soporte y contínuas actualizaciones que mejoran  funcionalidades, usabilidad y seguridad, se ha extendido su uso para la creación de páginas web en general.
 Además dispone del apoyo de la comunidad de desarrolladores que ponen a disposición infinidad de temas, plantillas y plugins.  
 
-Dentro del ranking mundial, ***WordPress*** es usado por el 28% de páginas web de todo el mundo, y de todas ellas, de las que usan CMS ocupa el 59% del mercado (como referencia en segundo lugar estaria Joomla con un 7%).  
+Dentro del ranking mundial de páginas web, el gestor de contenido **WordPress** es utilizado en el 28% de páginas web de todo el mundo y, de todas ellas, de las que usan Content Management System ocupa el 59% del mercado. Es de notoria importancia para hacernos una idea estadística mencionar que el segundo lugar del ranking lo ostenta Joomla con un total del 7% en cuanto a la utilización se refiere. 
 
-Según ***WordPress***, es utilizado por cerca de 75 millones de sitios web, más de 409 millones de personas ven más de 23,6 mil millones de páginas cada mes, los usuarios producen 69,5 millones de nuevos mensajes y 46,8 millones de nuevos comentarios cada mes.  
+Según datos estadísticos del propio **WordPress**, dicho CMS es utilizado por cerca de 75 millones de sitios web. Siguiendo con la línea cuantitativa, más de 409 millones de personas ven alrededor de 23,6 mil millones de páginas cada mes en Internet y los usuarios producen 69,5 millones de nuevos mensajes y aproximadamente 46,8 millones de nuevos comentarios cada mes. 
 
 ---
 
 #  Objetivo de la práctica
 
-Entre los objetivos de las actualizaciones tanto de la propia plataforma ***WordPress*** como de sus plugins y temas, está la de solucionas a las vulnerabilidades que se van descubriendo y publicando en cada una de sus versiones.  
-El objetivo de nuestro estudio es el de conocer en qué versión se encuentra cada página web de la muestra para poder identificar a cuantas vulnerabilidades está expuesta.  
-Realizando el análisis de datos globalmente, podemos posicionar cada país segun el estado de actualización de sus páginas ***WordPress*** asignando un nivel de Riesgo para cada país.
+Entre los objetivos de las actualizaciones tanto de la propia plataforma WordPress como de sus plugins y temas, radica el objetivo determinante de la seguridad que afecta irremediablemente al contenido mencionado en líneas anteriores. El objetivo principal se focaliza en solucionar vulnerabilidades que se descubren a medida que se publican las nuevas versiones.
 
-Todo ello se realiza a través de un lenguaje con enfoque estadístico llamado R.
+Así las cosas, el *main target* nuestro estudio es conocer ante qué versión de **WordPress** nos encontramos en cada página de las que, en adelante, utilizaremos como muestra en aras de conocer e identificar el riesgo y el número de vulnerabilidades a las que se encuentra expuesta.
+
+Adicionalmente y a raíz de un análisis de datos de carácter global, somos capaces de posicionar cada país segun el estado de actualización de sus páginas ***WordPress*** asignando un nivel de Riesgo para cada uno de ellos.
+
+La información se presenta en forma gráfica y permite visualizar fácilmente lo anteriormente expuesto.
+
+Para ello, haremos uso de un lenguaje con enfoque estadístico llamado R.
 
 [![Lenguaje R](./imagenes/LenguajeR.png)](https://es.wikipedia.org/wiki/R_(lenguaje_de_programaci%F3n))
 
 #  Procedimiento
 
-*  **Extracción de datos**: Para conseguir la lista de URLs *WordPress* con su versión y para cada versión, el listado de vulnerabilidades de cada una.
-*  **Procesado con R**: Tratamos los datos para procesar y ordenar dentro de DataFrames.
-*  **Graficas de resultados**: Sacamos graficas para entender los resultados de forma visual. 
-*  **Conclusiones**: Explicamos las conclusiones que se pueden sacar despues del tratamiento y muestra grafica de resultados.
+*  **Extracción de datos**: Con el objetivo de extraer la lista de URLs WordPress con su versión y para cada versión y el listado de vulnerabilidades de cada una de ellas.
+*  **Procesado con R**: Tratamiento de los datos extraídos para procesar y ordenar dentro de DataFrames.
+*  **Graficas de resultados**: Obtendremos gráficas con el objetivo de comprender los resultados de forma visual. 
+*  **Conclusiones**: Explicamos las conclusiones que obtenemos después del tratamiento y la muestra gráfica de resultados.
 
 
 ### Extracción de datos
 
-Para la extracción de datos, en un primer momento se implementó un crawler con el módulo de Python: **scrapy**. Esta araña web realizaba los siguientes pasos:
+En cuanto a la extracción de datos se refiere, en primera instancia se implementó un crawler con el módulo de Python: **scrapy**. Esta araña web realizaba los siguientes pasos:
 
- - Buscar en Google la siguiente consulta: `"index of” inurl:wp-content `. Esta búsqueda devuelve un listado de página que utilizan Wordpress.
- - Acceder resultado a resultado a la ruta `/readme.html`. En este fichero, aparece la versión de Wordpress si no ha sido modificado.
- - En el caso de mantener el readme por defecto, se realiza un parseo del html a través de **BeautifulSoup** y se extrae la versión. 
+ - Busca en Google la siguiente consulta: `"index of” inurl:wp-content `. Esta búsqueda devuelve un listado de página que utilizan Wordpress.
+ - Accede resultado a resultado a la ruta `/readme.html`. En el fichero, aparece la versión de Wordpress si este no ha sufrido modificaciones.
+ - En el caso de mantener el fichero *readme.html* por defecto, se realiza un parseo del html a través de **BeautifulSoup** para extraer la versión. 
  
- El problema aparece cuando Google detecta que se está utilizando un crawler y solicita un Captcha muy difícil de bypassear, lo que nos deja con una cantidad de resultados muy inferior a la esperada.
+El problema aparece cuando Google detecta que se está utilizando un *crawler* e inmediatamente solicita un Captcha muy difícil de *bypassear*, traduciéndose en una cantidad de resultados muy inferior a la esperada.
 
 La alternativa al crawler es el uso del servicio de **Google Custome Search Engine (CSE)** que, con una serie de modificaciones, puede utilizarse para realizar búsquedas en toda la red. 
 Otro problema que plantea esta alternativa es la limitación de la versión gratuita de la API: Solo permite consultar **64 resultados por búsqueda**.   
 Para evitar esta limitación se realizan diferentes búsquedas similares para poder obtener más resultados. En este caso, se utiliza la siguiente consulta modificando el campo `es` por un listado de sites disponibles:  
 `“index of” inurl:wp-content site:es `.  
-Así se obtienen 64 resultados por site y se pueden realizar comparativas entre los resultados de cada uno de ellos.  
+Así se obtienen 64 resultados por site y podemos realizar comparativas entre los resultados de cada uno de ellos.  
   
 Se han intentado utilizar otras APIs para la búsqueda de datos, pero se han encontrado los siguientes problemas en cada una de ellas:
 
@@ -73,7 +77,7 @@ Se han intentado utilizar otras APIs para la búsqueda de datos, pero se han enc
 
 ### Procesado con R
 
-Incorporamos el fichero en formato JSON en el script de R, para convertirlo en un dataframe, y luego limpiamos los resultados de la muestra que como es lógico estará **dirty**.  
+Incorporamos el fichero en formato JSON en el script de R, para convertirlo en un *dataframe*, y luego limpiamos los resultados de la muestra que como es lógico estará ***dirty***.  
 También quitamos las URLs repetidas, las duplicadas y eliminamos las que no hayamos podido obtener su versión.  
 En el package generado, tenemos la función `cargaUrls` que realiza este paso y devuelve el dataframe con las URLs de cada país.
 
@@ -87,7 +91,7 @@ La función `cargaVulnerabilidades` realiza este paso y tarda unos segundos porq
 Con estos datos, se hace el tratamiento para obtener para cada versión, el número de vulnerabilidades y la fecha de publicación de la versión.
 La función `totalVulnerabilidades` realiza este paso.
 
-El ultimo paso de procesado se cruza la información obteniendo un dataframe con los paises con sus versiones con su fecha de publicación y el número de vulnerabilidades descubiertas de la versión.
+El último paso de procesado se cruza la información obteniendo un *dataframe* con los paises con sus versiones con su fecha de publicación y el número de vulnerabilidades descubiertas de la versión.
 La función `GeneraTotalDF` realiza ese procesado.
 
 ```{r Librerias, echo=FALSE}
@@ -141,7 +145,7 @@ TotalVersionesURLVulnsPaises <- wpsversionator::GeneraTotalDF(TotalVersionesURLP
 
 ### Graficas de resultados
 
-Ahora con los dataframes preparados con el procesado anterior, se presentan las gráficas de resultados. Para cada una de ellas se realizan unos cálculos finales que preparan los datos para poder representar la información que se pretende mostrar.
+Llegados a este punto y con los dataframes preparados con el procesado anterior, se presentan las gráficas de resultados. Para cada una de ellas se realizan unos cálculos finales que preparan los datos para poder representar la información que se pretende mostrar.
 
 
 **Tarta con el total de versiones encontradas en la muestra, ordenada por mayor aparición**
@@ -185,6 +189,16 @@ plot(wpsversionator::mapa(TotalVersionesURLVulnsPaises))
   
 ### Conclusiones
   
-Por falta de tiempo no hemos podido incluir más cálculos que se podrían realizar una vez ya disponemos de todos los datos procesados.
-Con las gráficas hemos intentado mostrar de una forma visual y fácil de entender, la situación del versionado de las páginas Wordpress que hemos podido extraer, así como el estado de las vulnerabilidades.
-La conclusión final dependerá de los resultados en el momento de la ejecución pero en el momento de la creación del documento, se demuestra que no hay ningún país que no tenga versiones que no estén actualizadas. Eso significa que cuanto más antigua es la versión que contiene vulnerabilidades, más riesgo hay de ser explotadas.
+En base a la información obtenida a través del presente estudio, debemos resaltar los siguientes puntos:
+
+En primera instancia, advertimos que las conclusiones del presente estudio pueden sufrir modificaciones pues éstas dependerán en gran medida del momento en el que se ejecute dicho estudio.
+
+En segunda instancia, la importancia de mantener WordPress actualizado radica en tres puntos fundamentales los cuales se presentan en una escala de prioridades:
+
+- Garantizar la seguridad.
+- Corregir errores.
+- Añadir nuevas funcionalidades.
+
+En tercer lugar, sin embargo, es de notoria importancia reflejar que el riesgo en términos de seguridad es directamente proporcional al número de versión y antigüedad de la misma; en el momento de finalizar la práctica advertimos que no existe ningún país que tenga un nivel de actualización cercano al cien por cien y, por lo tanto, el alcance y vulnerabilidad de una posible explotación es mayor.
+
+Por último, el proyecto tan sólo presenta una pequeña idea de lo que en un principio quisimos desarrollar y que por tiempo y forma ha resultado imposible. A pesar de ello, el proyecto brinda al lector nuevas miras y enfoques y genera una idea del alcance que podría llegar a comprender con un mayor tiempo de desarrollo.
